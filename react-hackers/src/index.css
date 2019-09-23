@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+/* Sign Up CSS Below --------------------------------------------------------------*/
+
+/* Forms centered using Flex and Align Items: center w/ flex-direction:column */
+/* Form is the ENTIRE Form w/ inputs*/
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F97E03;
+  background-size: contain; 
+  padding: 2rem;
+}
+
+/* Each individual input shares the same className to make things easier */
+/* inputs */
+.signUpInput{
+  width: 30rem;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 3em;
+  margin: 1.3rem;
+  height: 6.5rem;
+
+}
+
+/*  Button */
+.signUpSubmitBtn {
+  width: 10rem;
+  height: 3rem;
+  color: black;
+  border: 3px solid #F97E03;
+  background-color: white;
+  border-radius: 3em;
+}
+.signUpSubmitBtn:hover {
+  color: white;
+  background: black;
+  transition: width 2s;
+}
+
+
+/* -------------------------------------------------------------------------------- */

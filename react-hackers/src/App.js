@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+// React Stuff
+import React, {useEffect} from 'react';
+import { Route, Switch} from "react-router-dom";
+// Axios Stuff
+import axiosWithAuth  from './utils/axiosWithAuth';
+// Styling
 import './App.css';
+// Component Imports
+import PrivateRoute from './components/PrivateRouter';
+import Header from "./components/Header";
+import SignUp from "./components/SignUp";
+import FormikLogin from "./components/Login";
+
 
 function App() {
+
+  useEffect(() => {
+    axiosWithAuth()
+    .get('/app/login',)
+    .then(res => console.log("%cGet Axios: ", "color:blue", res))
+    .catch(err=> console.log( err ))
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <h1>hello</h1>
+      <FormikLogin />
+
+      <Switch>
+        <Route exact path="/" />
+        <Route exact path="/signup" component={SignUp}/>
+        <Route exact path="/login"  component={FormikLogin}/>
+        <Route exact path="/about" />
+        <PrivateRoute exact path="/account" />
+        
+
+      </Switch>
     </div>
   );
 }
