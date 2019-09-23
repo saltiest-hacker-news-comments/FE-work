@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRouter';
 import Header from "./components/Header";
 import SignUp from "./components/SignUp";
 import FormikLogin from "./components/Login";
+import About from "./components/About"
 
 
 function App() {
@@ -25,13 +26,13 @@ function App() {
     <div className="App">
       <Header />
       <h1>hello</h1>
-      <FormikLogin />
+      {/* <FormikLogin /> */}
 
       <Switch>
         <Route exact path="/" />
         <Route exact path="/signup" component={SignUp}/>
         <Route exact path="/login"  component={FormikLogin}/>
-        <Route exact path="/about" />
+        <Route exact path="/about" component={About}/>
         <PrivateRoute exact path="/account" />
         
 
