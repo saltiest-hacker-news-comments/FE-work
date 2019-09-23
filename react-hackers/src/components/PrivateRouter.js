@@ -8,15 +8,14 @@ const PrivateRouter = ({component: Component, ...rest}) => {
 
     return(
         <Route 
-        {...rest}  
+        {...rest}
         render = {(props) => {
             if (localStorage.getItem('token')){
-                return <Component {...props}
-            } else {
-                return <Redirect to = '/logic' />
+                return <Component {...props} />
+            }else{
+                return <Redirect to = '/' />
             }
         }} />
-
     )
 }
 
