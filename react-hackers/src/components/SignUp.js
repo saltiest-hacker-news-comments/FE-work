@@ -88,28 +88,10 @@ const SignUp =({ touched, status, errors, values })=> {
 
          {/* Link to Login If user has an Account */}
 
-         <NavLink className="logInLink" href="/login" > Have an Account? Log In !</NavLink>
 
+         <NavLink className="logInLink" href="/login" > Have an Account? Log In !</NavLink>
         </Form>
     );
 }
-
-
-// const FormikUserSignUpForm = withFormik({
-//     mapPropsToValues({username, password, email, firstName, lastName}) {
-//         return {
-//             username: username || '',
-//             password: password || '',
-//             email: email || '',
-//             firstName: firstName || '',
-//             lastName:lastName || '',
-            
-//         };
-//     },
-
-
-    
-// })
-
 
 export default SignUp;

@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import SignUp from "./components/SignUp";
 import FormikLogin from "./components/Login";
 import About from "./components/About"
+import Landing from "./components/Landing"
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>hello</h1>
+      <Landing />
       {/* <FormikLogin /> */}
 
       <Switch>

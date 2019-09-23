@@ -13,10 +13,10 @@ const Header = () => {
             <Container>
                 <Row>
                     <Col>
-                        <Navbar color="light" light expand="md">
+                        <Navbar color="light" light expand="sm">
                             <NavbarBrand href="/">Salty Hackers</NavbarBrand>
                                 <Nav className="ml-auto" navbar>
-                                    <NavItem><NavLink tag={Link} to="/">Home</NavLink></NavItem>
+                                    <NavItem><NavLink exact={true} tag={Link} to="/">Home</NavLink></NavItem>
                                     <NavItem><NavLink tag={Link} to="/about">About</NavLink></NavItem>
                                     <NavItem><NavLink tag={Link} to="/signup">Sign Up</NavLink></NavItem>
                                     <NavItem><NavLink tag={Link} to="/account">Account</NavLink></NavItem>
