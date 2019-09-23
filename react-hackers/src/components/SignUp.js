@@ -24,47 +24,63 @@ import * as Yup from "yup";
 
 //Axios
 import axios from "axios";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
-
-
-
-
+import axiosWithAuth from "../utils/axiosWithAuth";
 
 /* Component ------------------------------------------------------------------------------------------------------ */
 const SignUp =({ touched, status, errors, values })=> {
 
-    const [users,setUsers] = useState([]);
+    const [users,setUsers] = useState({firstName: '', lastname: '',username: '', email: '', password: ''});
 
-      return (
-        <Form className="signUpForm form">
+    const handleChange = e => {
+        setUsers({
+            ...users,
+            [e.target.name]: e.target.values
+        });
+    };
+
+
+    const handleSubmit = () => {
+        console.log("CLICKED!");
+        axiosWithAuth()
+        .post('auth/register', {username: values.username, password: values.password})
+        .then( res => {
+            console.log('%c UserSignUp Res: ', 'color:green', res)
+        })
+        .catch( err => console.log('%c UserSignUp Err: ', 'color:green', err))
+    };
+
+    return (
+        <Form onSubmit={handleSubmit} className="signUpForm form"   >
+
+         
 
          <FormGroup className="signUpInput">
              <Label> 🥨 First Name: </Label>
-             <Input type="text" name="firstName" placeholder="First Name"/>
+             <Input type="text" name="firstName" placeholder="First Name" onChange={handleChange}/>
          </FormGroup>
 
 
          <FormGroup className="signUpInput">
              <Label> 🥨 Last Name: </Label>
-             <Input type="text" name="lastName" placeholder="Last Name"/>
+             <Input type="text" name="lastName" placeholder="Last Name" onChange={handleChange}/>
          </FormGroup>
 
 
         <FormGroup className="signUpInput">
              <Label> 🧂 Username: </Label>
-             <Input type="text" name="username" placeholder="Username"/>
+             <Input type="text" name="username" placeholder="Username" onChange={handleChange}/>
         </FormGroup>
 
 
          <FormGroup className="signUpInput">
              <Label> 📧 E-Mail: </Label>
-             <Input type="email" name="email" placeholder="E-Mail"/>
+             <Input type="email" name="email" placeholder="E-Mail" onChange={handleChange}/>
          </FormGroup>
          
 
          <FormGroup className="signUpInput">
              <Label> 🔑 Password: </Label>
-             <Input type="text" name="password" placeholder="Password"/>
+             <Input type="password" name="password" placeholder="Password" onChange={handleChange}/>
          </FormGroup>
 
          <button className="signUpSubmitBtn submitBtn">Submit ✔️</button>
@@ -74,28 +90,21 @@ const SignUp =({ touched, status, errors, values })=> {
 }
 
 
-const FormikUserSignUpForm = withFormik({
-    mapPropsToValues({username, password, email, firstName, lastName}) {
-        return {
-            username: username || '',
-            password: password || '',
-            email: email || '',
-            firstName: firstName || '',
-            lastName:lastName || '',
+// const FormikUserSignUpForm = withFormik({
+//     mapPropsToValues({username, password, email, firstName, lastName}) {
+//         return {
+//             username: username || '',
+//             password: password || '',
+//             email: email || '',
+//             firstName: firstName || '',
+//             lastName:lastName || '',
             
-        };
-    },
+//         };
+//     },
 
-    handleSubmit(values, {resetForm, props, setStatus}) {
-        axiosWithAuth()
-        .post('auth/register', {username: values.username, password: values.password})
-        .then( res => {
-            console.log('%c UserSignUp Res: ', 'color:green', res)
-        })
-        .catch( err => console.log('%c UserSignUp Err: ', 'color:green', err))
-    }
+
     
-})
+// })
 
 
 export default SignUp;
