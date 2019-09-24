@@ -13,7 +13,9 @@ import FormikLogin from "./components/Login";
 import About from "./components/About";
 import Landing from "./components/LandingPage/Landing";
 import Account from "./components/Account";
-import CommentList from "./components/CommentList"
+import { CommentList } from "./components/CommentList";
+import { TopUsers } from "./components/LandingPage/TopUsers"
+
 
 
 function App() {
@@ -29,7 +31,7 @@ function App() {
     <div className="App">
       <Header />
       {/* <FormikLogin /> */}
-
+      
       <Switch>
         <Route exact path="/" component={Landing}/>
         <Route exact path="/signup" component={SignUp}/>

@@ -1,5 +1,6 @@
 import React from "react"
 import { Container,Card, CardImg, Row, Col, Collapse, Navbar, Jumbotron, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
+import TopUserCard from "./TopUserCard"
 
 export const UsersInfo = [
     {
@@ -34,14 +35,16 @@ export const UsersInfo = [
 ];
 
 
-function TopUsers() {
+export const  TopUsers = () => {
     return (
-        <div>
-            <Card>
-                <CardImg>
-        
-                </CardImg>
-            </Card>
-        </div>
+        UsersInfo.map( user => {
+            return ( 
+                <TopUserCard
+                key={user.id}
+                portrait = {user.portrait}
+                name={user.name}
+                comment={user.comment} />
+            )
+        })
     )
 }

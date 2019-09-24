@@ -1,15 +1,29 @@
 import React from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
+import { useDarkMode } from '../hooks/useDarkMode';
+
+
+
 
 const Header = () => {
-    const handleClick = event => {
-        event.preventDefault();
-        console.log(event);
-    }
+    
+    const [darkMode,setDarkMode] = useDarkMode(false);
+    
+    const toggleDark = e => {
+        e.preventDefault();
+        setDarkMode(!darkMode);
+    };
+
+
+
+    // const handleClick = event => {
+    //     event.preventDefault();
+    //     console.log(event);
+    // }
 
     return (
-        <header>
+        <header >
             
                 <Row>
                     <Col>
@@ -22,7 +36,7 @@ const Header = () => {
                                     <NavLink tag={Link} to="/" activeClassName="active" active={window.location === '/'}>Home</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} to="/commentList" activeClassName="active" active={window.loaction === '/'}> List</NavLink>
+                                    <NavLink tag={Link} to="/commentList" activeClassName="active" active={window.location === '/commentList'}> List</NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink tag={Link} to="/about" activeClassName="active" active={window.location === '/about'}>About</NavLink>

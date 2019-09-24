@@ -13,6 +13,19 @@ code {
 }
 
 
+/* ---------------- DARK MODE -----------------------------------------------------*/
+
+.dark-mode {
+  color:#fff;
+  background-color:#4A3E36;
+  
+}
+
+.dark-mode header {
+  color:#fff;
+  background-color: #998070;
+}
+
 /* Sign Up CSS Below --------------------------------------------------------------*/
 
 /* Color HexCodes: **
@@ -214,7 +227,17 @@ White: #FFFFFF;
   color: #fff;
 }
 
-/*------------------------------ */
-.testMarginTop{
-  margin-top: 5rem;
+/*--------------------------------------------------------------------------------- */
+/* commentList below ----------------------------------------------------------------*/
+
+.commentComponent {
+  text-align: left;
 }
+.commentIMG{
+  max-width: 100%;
+}
+.commentImg img {
+  width: 5rem;
+}
+
+/* -------------------------------------------------------------------------------------*/
