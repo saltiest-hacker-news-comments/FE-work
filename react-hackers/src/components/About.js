@@ -1,6 +1,7 @@
 import React from "react";
 
 const About = () => {
+
   return (
     <div className="main-about-container">
       <div className="team-container">
@@ -23,6 +24,8 @@ const About = () => {
               <a href="https://github.com/manjulamishra">Github</a>
             </button>
           </div>
+      )
+
 
           <div className="team-members">
             <img
