@@ -31,7 +31,8 @@ const SignUp =({ touched, status, errors, values })=> {
         });
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = e => {
+        e.preventDefault();
         console.log("CLICKED!");
         axiosWithAuth()
         .post('/auth/register', {username: users.username, password: users.password})

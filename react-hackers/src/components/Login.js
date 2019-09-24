@@ -77,6 +77,7 @@ const FormikLogin = withFormik({
         axiosWithAuth()
             .post('/auth/login', values)
             .then(res => setLogins(res))
+            .then(props.history.push('/'))
             .catch(err => console.log("%cLogin Axios Err: ", "color:orange", err))
     }
 })(Login);
