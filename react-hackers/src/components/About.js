@@ -8,7 +8,6 @@ const About = () => {
             <p>Info about our app</p>
           <div className="team-container">
               <h2>Meet our Team</h2>
-              <p></p>
 
         
       </div> {/* This closes team-container */}
