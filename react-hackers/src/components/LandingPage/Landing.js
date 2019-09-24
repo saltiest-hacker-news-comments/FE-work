@@ -4,10 +4,10 @@ import { Container, Row, Col, Collapse, Navbar, Jumbotron, NavbarToggler, Navbar
 
 const Landing = () => {
     return (
-        <Jumbotron>
-            <h1>Salty Hackers</h1>
+        <Jumbotron style={{background: '#f97e03'}}>
+            <h1 className="jumbo-head">Saltines</h1>
+            <h2 className="jumbo-subhead">A Hacker News Troll Ranker</h2>
         </Jumbotron>
-
     )
 }
 
