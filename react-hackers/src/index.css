@@ -172,7 +172,27 @@ White: #FFFFFF;
 /* About.js CSS Below------------------------------------------------------------- */
 
 
-.about-container{
-  background-color:#F97E03;
-  
+.main-about-container{
+  background-color: #F97E03;
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
+
+.team-container {
+  width: 880px;
+  margin: 0 auto;
+}
+
+.team-members{
+  padding-bottom: 50px;
+  align-items: center;  
+}
+
+.team-members img {
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+  }
+
+
