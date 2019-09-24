@@ -165,11 +165,15 @@ White: #FFFFFF;
   color: orange;
 }
 
+.logo {
+  max-height: 75px;
+}
+
 /* -------------------------------------------------------------------------------- */
 
 
 
-/* About.js CSS Below------------------------------------------------------------- */
+/* About.js CSS Below-------------------------------------------------------------- */
 
 
 .main-about-container{
@@ -196,3 +200,21 @@ White: #FFFFFF;
   }
 
 
+
+
+  /* Landing CSS Below------------------------------------------------------------- */
+
+.jumbo-head {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.jumbo-subhead {
+  color: #fff;
+}
+
+/*------------------------------ */
+.testMarginTop{
+  margin-top: 5rem;
+}

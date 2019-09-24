@@ -10,29 +10,34 @@ const Header = () => {
 
     return (
         <header>
-            <Container>
+            
                 <Row>
                     <Col>
                         <Navbar color="light" light expand="sm">
-                            <NavbarBrand href="/">Salty Hackers</NavbarBrand>
+                            <NavbarBrand tag={Link} to="/">
+                                <img className="logo" src="https://trello-attachments.s3.amazonaws.com/5d89a54e06bb0a3a361741e9/975x347/87efc95a769db28dc466ae69284802fd/Salt_full_logo.png" />
+                            </NavbarBrand>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <NavLink tag={Link} to="/" activeClassName="active">Home</NavLink>
+                                    <NavLink tag={Link} to="/" activeClassName="active" active={window.location === '/'}>Home</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} to="/about" activeClassName="active">About</NavLink>
+                                    <NavLink tag={Link} to="/commentList" activeClassName="active" active={window.loaction === '/'}> List</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} to="/signup" activeClassName="active">Sign Up</NavLink>
+                                    <NavLink tag={Link} to="/about" activeClassName="active" active={window.location === '/about'}>About</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} to="/account" activeClassName="active">Account</NavLink>
+                                    <NavLink tag={Link} to="/signup" activeClassName="active" active={window.location === '/signup'}>Sign Up</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} to="/account" activeClassName="active" active={window.location === '/account'}>Account</NavLink>
                                 </NavItem>
                             </Nav>
                         </Navbar>
                     </Col>
                 </Row>
-            </Container>
+            
         </header>
     )
 }
