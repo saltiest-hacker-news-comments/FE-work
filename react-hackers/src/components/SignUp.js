@@ -3,14 +3,6 @@ import React, { useState, useEffect } from "react";
 
 //ReactStrap
 import {
-    Card,
-    Button,
-    CardHeader,
-    CardFooter,
-    CardBody,
-    CardTitle,
-    CardText,
-    CardImg,
     FormGroup,
     Label,
     Input,
@@ -30,7 +22,7 @@ import axiosWithAuth from "../utils/axiosWithAuth";
 /* Component ------------------------------------------------------------------------------------------------------ */
 const SignUp =({ touched, status, errors, values })=> {
 
-    const [users,setUsers] = useState({firstName: '', lastname: '',username: '', email: '', password: ''});
+    const [users,setUsers] = useState({username:'', password:''});
 
     const handleChange = e => {
         setUsers({
@@ -39,11 +31,10 @@ const SignUp =({ touched, status, errors, values })=> {
         });
     };
 
-
     const handleSubmit = () => {
         console.log("CLICKED!");
         axiosWithAuth()
-        .post('auth/register', {username: values.username, password: values.password})
+        .post('/auth/register', {username: users.username, password: users.password})
         .then( res => {
             console.log('%c UserSignUp Res: ', 'color:green', res)
         })
@@ -51,11 +42,12 @@ const SignUp =({ touched, status, errors, values })=> {
     };
 
     return (
+    <div className="signUpForm form">
         <Form onSubmit={handleSubmit} className="signUpForm form"   >
 
-         
-{/* 
-         <FormGroup className="signUpInput">
+        <h2 className="headerStyles signUpHeaderStyles">Don't Have an Account? Sign Up Below !</h2>
+
+        {/*<FormGroup className="signUpInput">
              <Label> 🥨 First Name: </Label>
              <Input type="text" name="firstName" placeholder="First Name" onChange={handleChange}/>
          </FormGroup>
@@ -86,11 +78,11 @@ const SignUp =({ touched, status, errors, values })=> {
 
          <button className="signUpSubmitBtn submitBtn">Submit ✔️</button>
 
-         {/* Link to Login If user has an Account */}
-
-
-         <NavLink className="logInLink" href="/login" > Have an Account? Log In !</NavLink>
         </Form>
+
+         {/* Link to Login If user has an Account */}
+         <NavLink className="logInLink" href="/login" > Have an Account? Login Here!</NavLink>
+    </div>
     );
 }
 

@@ -7,14 +7,14 @@ import * as Yup from "yup";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import axios from 'axios';
 //React-strap
-import {Button} from "reactstrap";
+import {Button, NavLink} from "reactstrap";
+
 
 
 
 const Login = ({ values, errors, status, touched, handleSubmit }) => {
     const [logins, setLogins] = useState([]);
 
-    console.log("LOGINS: ",logins)
     useEffect(() => {
         if (status) {
             setLogins([[...logins, status]])
@@ -22,17 +22,17 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
     }, [status]);
     return (
         <div className="signUpForm form">
-            <h2>Please Login</h2>
+            <h2 className="headerStyles">Have an Account? Login Below!</h2>
 
             <Form className="signUpForm form" onSubmit={handleSubmit}>
 
-                <div className="loginUserPass">Username:</div>
+                <div className="loginUserPass">🧂 Username: </div>
                 <Field className="loginComp" type="text" name="username" placeholder="Your Username" />
                 {touched.username && errors.username && (
                     <p className="error">{errors.username} </p>
 
               )}
-                <div className="loginUserPass">Password:</div>
+                <div className="loginUserPass"> 🔑 Password: </div>
                 <Field className="loginComp" type="text" name="password" placeholder="Your Password" />
                 {touched.password && errors.password && (
                     <p className="error">{errors.password} </p>
@@ -40,6 +40,10 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
                 )}
             
             <Button className="signUpSubmitBtn submitBtn" type="submit">Login</Button>
+
+             {/* Link to SignUp If user has an Account */}
+         <NavLink className="signUpLink" href="/signup" > Don't Have an Account? Sign Up Here !</NavLink>
+            
             </Form>
             {/* Response */}
             {logins.map(login => (
@@ -51,6 +55,7 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
                 </div>
             ))}
         </div>
+        
     );
 };
 

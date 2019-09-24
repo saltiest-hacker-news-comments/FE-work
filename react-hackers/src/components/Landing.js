@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col, Collapse, Navbar, Jumbotron, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from "reactstrap"
+import { Container, Row, Col, Collapse, Navbar, Jumbotron, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
 
 
 const Landing = () => {
@@ -7,6 +7,7 @@ const Landing = () => {
         <Jumbotron>
             <h1>Salty Hackers</h1>
         </Jumbotron>
+
     )
 }
 

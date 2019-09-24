@@ -16,21 +16,20 @@ import Landing from "./components/Landing"
 
 function App() {
 
-  useEffect(() => {
-    axiosWithAuth()
-    .get('/app/login',)
-    .then(res => console.log("%cGet Axios: ", "color:blue", res))
-    .catch(err=> console.log( err ))
-  })
+  // useEffect(() => {
+  //   axiosWithAuth()
+  //   .get('/app/login',)
+  //   .then(res => console.log("%cGet Axios: ", "color:blue", res))
+  //   .catch(err=> console.log( err ))
+  // })
 
   return (
     <div className="App">
       <Header />
-      <Landing />
       {/* <FormikLogin /> */}
 
       <Switch>
-        <Route exact path="/" />
+        <Route exact path="/" component={Landing}/>
         <Route exact path="/signup" component={SignUp}/>
         <Route exact path="/login"  component={FormikLogin}/>
         <Route exact path="/about" component={About}/>

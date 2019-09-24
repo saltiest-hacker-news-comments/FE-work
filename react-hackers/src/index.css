@@ -52,16 +52,19 @@ White: #FFFFFF;
 
 /*  Button */
 .signUpSubmitBtn {
-  width: 10rem;
-  height: 3rem;
-  color: black;
+  width: 12rem;
+  height: 4rem;
+  color: white;
   border: 3px solid #F97E03;
-  background-color: white;
-  border-radius: 3em;
+  background-color: #6c757d;
+  border-radius: 3em !important;
+  margin-bottom: -2rem;
+  margin-top: 1rem;
+  font-size: 1.4rem !important;
 }
 .signUpSubmitBtn:hover {
   color: white;
-  background: #998070;
+  background: #5f676e;
   transition: 1s;
 }
 
@@ -69,8 +72,8 @@ White: #FFFFFF;
 .logInLink{
   width: 30rem;
   color:  white;
-  border: 3px dotted #4A3E36;;
-  background-color: #4A3E36;
+  border: 3px dotted #998070;;
+  background-color: #998070;
   border-radius: 3em;
   font-size: 1.6rem;
   padding: 1rem;
@@ -79,9 +82,35 @@ White: #FFFFFF;
 }
 .logInLink:hover{
   color: white;
-  background-color:  #998070;
+  background-color:  #4A3E36;
   transition: 1s;
-  border: 3px dotted #998070;
+  border: 3px dotted #4A3E36;
+}
+
+/* Don't Have An Account? Sign Up Here! */
+.signUpLink{
+  width: 30rem;
+  color:  white;
+  border: 3px dotted #998070;;
+  background-color: #998070;
+  border-radius: 3em;
+  font-size: 1.6rem;
+  padding: 1rem;
+  font-weight: bold;
+  margin: 2rem;
+  margin-top: 4rem;
+}
+.signUpLink:hover{
+  color: white;
+  background-color:  #4A3E36;
+  transition: 1s;
+  border: 3px dotted #4A3E36;
+}
+
+.signUpHeaderStyles{
+ margin: 2rem;
+ margin-top: 0rem;
+
 }
 
 
@@ -97,18 +126,31 @@ White: #FFFFFF;
   padding: 0.8rem;
   border-radius: 3em;
   margin: 1.3rem;
-  height: 3rem;
+  height: 5rem;
+  margin-top: 0;
 }
 
 .loginUserPass {
   border: 3px solid white;
-  width: 7rem;
+  width: 10rem;
   background: white;
   padding: 0.8rem;
   border-radius: 3em;
   margin: 1rem;
   margin-top: 0;
   color: black;
+  
+}
+
+.headerStyles{
+  width: 30rem;
+  color:  white;
+  border: 3px dotted #4A3E36;;
+  background-color: #4A3E36;
+  border-radius: 3em;
+  font-size: 1.6rem;
+  padding: 1rem;
+  font-weight: bold;
   
 }
 
@@ -123,3 +165,14 @@ White: #FFFFFF;
   color: orange;
 }
 
+/* -------------------------------------------------------------------------------- */
+
+
+
+/* About.js CSS Below------------------------------------------------------------- */
+
+
+.about-container{
+  background-color:#F97E03;
+  
+}
