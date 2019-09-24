@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, Link } from "react-router-dom";
-import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from "reactstrap"
+import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
 
 const Header = () => {
     const handleClick = event => {
@@ -15,13 +15,21 @@ const Header = () => {
                     <Col>
                         <Navbar color="light" light expand="sm">
                             <NavbarBrand href="/">Salty Hackers</NavbarBrand>
-                                <Nav className="ml-auto" navbar>
-                                    <NavItem><NavLink exact={true} tag={Link} to="/">Home</NavLink></NavItem>
-                                    <NavItem><NavLink tag={Link} to="/about">About</NavLink></NavItem>
-                                    <NavItem><NavLink tag={Link} to="/signup">Sign Up</NavLink></NavItem>
-                                    <NavItem><NavLink tag={Link} to="/account">Account</NavLink></NavItem>
-                                </Nav>
-                        </Navbar> 
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>
+                                    <NavLink tag={Link} to="/" activeClassName="active">Home</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} to="/about" activeClassName="active">About</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} to="/signup" activeClassName="active">Sign Up</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} to="/account" activeClassName="active">Account</NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Navbar>
                     </Col>
                 </Row>
             </Container>
