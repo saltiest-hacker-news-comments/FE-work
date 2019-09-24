@@ -5,15 +5,16 @@ import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 // Axios Stuff
 import axiosWithAuth from '../utils/axiosWithAuth';
+import axios from 'axios';
 //React-strap
 import {Button} from "reactstrap";
 
 
 
-const Login = ({ values, errors, status, touched }) => {
+const Login = ({ values, errors, status, touched, handleSubmit }) => {
     const [logins, setLogins] = useState([]);
 
-    console.log("LOGINS: ",logins.username)
+    console.log("LOGINS: ",logins)
     useEffect(() => {
         if (status) {
             setLogins([[...logins, status]])
@@ -23,21 +24,23 @@ const Login = ({ values, errors, status, touched }) => {
         <div className="signUpForm form">
             <h2>Please Login</h2>
 
-            <form>
-                <Field className="signUpInput" type="text" name="username" placeholder="Your Username" />
+            <Form className="signUpForm form" onSubmit={handleSubmit}>
+
+                <div className="loginUserPass">Username:</div>
+                <Field className="loginComp" type="text" name="username" placeholder="Your Username" />
                 {touched.username && errors.username && (
                     <p className="error">{errors.username} </p>
 
               )}
-
-                <Field className="signUpInput" type="text" name="password" placeholder="Your Password" />
+                <div className="loginUserPass">Password:</div>
+                <Field className="loginComp" type="text" name="password" placeholder="Your Password" />
                 {touched.password && errors.password && (
                     <p className="error">{errors.password} </p>
 
                 )}
             
-            <Button className="signUpSubmitBtn submitBtn">Login</Button>
-            </form>
+            <Button className="signUpSubmitBtn submitBtn" type="submit">Login</Button>
+            </Form>
             {/* Response */}
             {logins.map(login => (
 
@@ -64,14 +67,11 @@ const FormikLogin = withFormik({
         password: Yup.string().required("Enter your password")
       }),
     
-    handleSubmit(values, { props, setStatus }) {
+    handleSubmit(values, { props, setLogins }) {
         console.log("%cUserLogin values: ", "color:orange", values)
         axiosWithAuth()
-            .post('/auth/login')
-            .then(res => 
-                console.log("c%Axios Login res: ", "color:orange", res),
-                    // localStorage.setItem('token', res.data.payload);
-            )
+            .post('/auth/login', values)
+            .then(res => setLogins(res))
             .catch(err => console.log("%cLogin Axios Err: ", "color:orange", err))
     }
 })(Login);

@@ -15,6 +15,16 @@ code {
 
 /* Sign Up CSS Below --------------------------------------------------------------*/
 
+/* Color HexCodes: **
+
+Orange: #F97E03
+Black: #000000
+Paco-Grey: #4A3E36
+Almond Frost-grey: #998070
+White: #FFFFFF; 
+*/
+
+
 /* Forms centered using Flex and Align Items: center w/ flex-direction:column */
 /* Form is the ENTIRE Form w/ inputs*/
 
@@ -51,9 +61,65 @@ code {
 }
 .signUpSubmitBtn:hover {
   color: white;
-  background: black;
-  transition: width 2s;
+  background: #998070;
+  transition: 1s;
+}
+
+/* Have an Account? Log In ! Link */
+.logInLink{
+  width: 30rem;
+  color:  white;
+  border: 3px dotted #4A3E36;;
+  background-color: #4A3E36;
+  border-radius: 3em;
+  font-size: 1.6rem;
+  padding: 1rem;
+  font-weight: bold;
+  margin: 2rem;
+}
+.logInLink:hover{
+  color: white;
+  background-color:  #998070;
+  transition: 1s;
+  border: 3px dotted #998070;
 }
 
 
 /* -------------------------------------------------------------------------------- */
+
+/* Login.js CSS Below--------------------------------------------------------------- */
+
+/* This styles the input */
+.loginComp{
+  border: 3px solid white;
+  width: 30rem;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 3em;
+  margin: 1.3rem;
+  height: 3rem;
+}
+
+.loginUserPass {
+  border: 3px solid white;
+  width: 7rem;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 3em;
+  margin: 1rem;
+  margin-top: 0;
+  color: black;
+  
+}
+
+
+/* -------------------------------------------------------------------------------- */
+
+
+
+/* Header.js CSS Below------------------------------------------------------------- */
+
+.active {
+  color: orange;
+}
+

@@ -13,7 +13,8 @@ import {
     CardImg,
     FormGroup,
     Label,
-    Input
+    Input,
+    NavLink
   } from "reactstrap";
 
 //Formik
@@ -53,7 +54,7 @@ const SignUp =({ touched, status, errors, values })=> {
         <Form onSubmit={handleSubmit} className="signUpForm form"   >
 
          
-
+{/* 
          <FormGroup className="signUpInput">
              <Label> 🥨 First Name: </Label>
              <Input type="text" name="firstName" placeholder="First Name" onChange={handleChange}/>
@@ -63,7 +64,7 @@ const SignUp =({ touched, status, errors, values })=> {
          <FormGroup className="signUpInput">
              <Label> 🥨 Last Name: </Label>
              <Input type="text" name="lastName" placeholder="Last Name" onChange={handleChange}/>
-         </FormGroup>
+         </FormGroup> */}
 
 
         <FormGroup className="signUpInput">
@@ -72,11 +73,11 @@ const SignUp =({ touched, status, errors, values })=> {
         </FormGroup>
 
 
-         <FormGroup className="signUpInput">
+         {/* <FormGroup className="signUpInput">
              <Label> 📧 E-Mail: </Label>
              <Input type="email" name="email" placeholder="E-Mail" onChange={handleChange}/>
          </FormGroup>
-         
+          */}
 
          <FormGroup className="signUpInput">
              <Label> 🔑 Password: </Label>
@@ -85,26 +86,12 @@ const SignUp =({ touched, status, errors, values })=> {
 
          <button className="signUpSubmitBtn submitBtn">Submit ✔️</button>
 
+         {/* Link to Login If user has an Account */}
+
+
+         <NavLink className="logInLink" href="/login" > Have an Account? Log In !</NavLink>
         </Form>
     );
 }
-
-
-// const FormikUserSignUpForm = withFormik({
-//     mapPropsToValues({username, password, email, firstName, lastName}) {
-//         return {
-//             username: username || '',
-//             password: password || '',
-//             email: email || '',
-//             firstName: firstName || '',
-//             lastName:lastName || '',
-            
-//         };
-//     },
-
-
-    
-// })
-
 
 export default SignUp;
