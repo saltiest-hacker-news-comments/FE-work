@@ -155,8 +155,6 @@ const AboutCards = () => (
         </p>
       </header>
 
-     
-
       <div className="aboutStyles">
          <Card
             className="aboutCard"
