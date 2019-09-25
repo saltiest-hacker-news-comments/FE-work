@@ -15,6 +15,7 @@ import Landing from "./components/LandingPage/Landing";
 import AccountCard from "./components/AccountCard";
 import AccountList from "./components/AccountList";
 import { CommentList } from "./components/CommentList";
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -39,6 +40,8 @@ function App() {
         <Route exact path="/account"  component={AccountList}/> 
         {/* <PrivateRoute exact path="/account"  component={AccountList}/> */}
       </Switch>
+
+      <Footer />
     </div>
   );
 }
