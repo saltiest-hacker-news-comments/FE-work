@@ -1,57 +1,62 @@
+// outdated
+
+
+
+
 import React from "react";
 import { Card, Icon, Button } from "semantic-ui-react";
 
 const manjula = (
   <>
-   <Button animated='horizontal' href="https://github.com/manjulamishra">
+    <Button animated='horizontal' href="https://github.com/manjulamishra">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="https://www.linkedin.com/in/manjula-mishra" >
+    </Button>
+    <Button color='linkedin' href="https://www.linkedin.com/in/manjula-mishra" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const aaron = (
-   <>
-   <Button animated='horizontal' href="https://github.com/1aaronscott">
+  <>
+    <Button animated='horizontal' href="https://github.com/1aaronscott">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="" >
+    </Button>
+    <Button color='linkedin' href="" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const nick = (
-   <>
-   <Button animated='horizontal' href="https://github.com/Nburkhal">
+  <>
+    <Button animated='horizontal' href="https://github.com/Nburkhal">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="https://www.linkedin.com/in/nick-burkhalter-4b0377108/" >
+    </Button>
+    <Button color='linkedin' href="https://www.linkedin.com/in/nick-burkhalter-4b0377108/" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const alfredo = (
-   <>
-   <Button animated='horizontal' href="https://github.com/alqu7095">
+  <>
+    <Button animated='horizontal' href="https://github.com/alqu7095">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="" >
+    </Button>
+    <Button color='linkedin' href="" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
@@ -59,83 +64,83 @@ const alfredo = (
 
 const derek = (
    <>
-   <Button animated='horizontal' href="https://github.com/DerekEtman">
+    <Button animated='horizontal' href="https://github.com/DerekEtman">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="https://www.linkedin.com/in/dereketman/" >
+    </Button>
+    <Button color='linkedin' href="https://www.linkedin.com/in/dereketman/" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const dakotah = (
-   <>
-   <Button animated='horizontal' href="https://github.com/frescocodes">
+  <>
+    <Button animated='horizontal' href="https://github.com/frescocodes">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="https://www.linkedin.com/in/dakotah-huey-76439583/" >
+    </Button>
+    <Button color='linkedin' href="https://www.linkedin.com/in/dakotah-huey-76439583/" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const brandy = (
-   <>
-   <Button animated='horizontal' href="https://github.com/BrandyBecker/">
+  <>
+    <Button animated='horizontal' href="https://github.com/BrandyBecker/">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="www.linkedin.com/in/BrandyBeckerFSW" >
+    </Button>
+    <Button color='linkedin' href="www.linkedin.com/in/BrandyBeckerFSW" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const akak = (
-   <>
-   <Button animated='horizontal' href="https://github.com/Aakak">
+  <>
+    <Button animated='horizontal' href="https://github.com/Aakak">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="https://www.linkedin.com/in/akak-almaz-46415770/" >
+    </Button>
+    <Button color='linkedin' href="https://www.linkedin.com/in/akak-almaz-46415770/" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const kathryn = (
-   <>
-   <Button animated='horizontal' href="https://github.com/rhokath">
+  <>
+    <Button animated='horizontal' href="https://github.com/rhokath">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="" >
+    </Button>
+    <Button color='linkedin' href="" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
 );
 
 const shawn = (
-   <>
-   <Button animated='horizontal' href="https://github.com/ShawnM76">
+  <>
+    <Button animated='horizontal' href="https://github.com/ShawnM76">
       <Button.Content hidden>GitHub</Button.Content>
       <Button.Content visible>
-         <i class="github icon stylesGH" ></i>
+        <i class="github icon stylesGH" ></i>
       </Button.Content>
-   </Button>
-   <Button color='linkedin' href="" >
+    </Button>
+    <Button color='linkedin' href="" >
       <Icon name='linkedin stylesLI' /> LinkedIn
    </Button>
   </>
@@ -184,7 +189,7 @@ const AboutCards = () => (
       extra={derek}
     />
     <Card
-     className="aboutCard" 
+      className="aboutCard"
       image="https://ca.slack-edge.com/T4JUEB3ME-ULP6AEAF3-7aa2e18de5a8-72"
       header="Dakotah Huey"
       meta="Web React I"
@@ -200,7 +205,7 @@ const AboutCards = () => (
       extra={brandy}
     />
     <Card
-     className="aboutCard"
+      className="aboutCard"
       image="https://avatars0.githubusercontent.com/u/4251464?s=400&v=4"
       header="Akak Almazbekova"
       meta="Web React I"
@@ -216,7 +221,7 @@ const AboutCards = () => (
       extra={kathryn}
     />
     <Card
-     className="aboutCard"
+      className="aboutCard"
       image="https://avatars0.githubusercontent.com/u/47621726?s=400&v=4"
       header="Shawn McManus"
       meta="Web Backend"
@@ -257,7 +262,7 @@ export default AboutCards;
 //               <a href="https://github.com/manjulamishra">Github</a>
 //             </button>
 //           </div>
-      
+
 
 
 //           <div className="team-members">

@@ -329,7 +329,6 @@ White: #FFFFFF;
 }
 .commentUpVote:hover{
   transform: scale(1.1);
-
 }
 
 /* Down Vote Comments */
@@ -340,7 +339,6 @@ White: #FFFFFF;
 }
 .commentDownVote:hover{
   transform: scale(1.1);
-
 }
 
 .usernameFontWeight{
@@ -351,24 +349,16 @@ White: #FFFFFF;
 
 /* -------------------------------------------------------------------------------------*/
 
-/* .welcomeHeader {
-  display: flex;
-  background: white;
-  width: 40rem;
-  border-radius: 3em;
-  justify-content: center;
-  margin: 2rem;
-  padding: 1rem;
-} */
 
-/* .accountStyles {
-  background: red;
+/*--------------------------------------------------------------------------------- */
+/* AccountCard styles -------------------------------------------------------------- */
+
+.comment-delete{
+  background:#4682B4;
+  padding: 7px 15px;
 }
 
-.accountStylesPart2{
-  background: green;
+.comment-edit{
+  background:#4682B4;
+  padding: 7px 15px;
 }
-
-.accountWrapper {
-  background: #F97E03;
-} */

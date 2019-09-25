@@ -2,9 +2,6 @@ import React from 'react';
 import { Checkbox } from 'semantic-ui-react';
 
 
-export const DarkModeSlider = () => {
+export const DarkModeSlider = () => <Checkbox slider/>
 
-<Checkbox slider/>
-
-}
 

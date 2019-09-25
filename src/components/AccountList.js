@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import AccountCard from './AccountCard';
-import { UsersInfo } from './LandingPage/TopUsers';
+// import { UsersInfo } from './LandingPage/TopUsers';
 
 
 const AccountList = (props) => {
-  const [accounts, setAccounts] = useState([UsersInfo]);
+  const [accounts, setAccounts] = useState([]);
   return (
     <div>
       <div>
