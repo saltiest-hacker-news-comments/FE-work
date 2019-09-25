@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import AccountCard from './AccountCard';
+import axiosWithAuth from '../utils/axiosWithAuth';
 // import { UsersInfo } from './LandingPage/TopUsers';
 
 
 const AccountList = (props) => {
-  const [accounts, setAccounts] = useState([]);
+  const [favorite, setFavorite] = useState([]);
+
+  useEffect(() => {
+    axiosWithAuth()
+
+  },[])
+
+
+
   return (
     <div>
       <div>

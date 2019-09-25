@@ -14,8 +14,8 @@ const Account = (props) => {
               No one is saltier than me.
                 </Comment.Text>
             <Comment.Actions>
-              <Comment.Action className="comment-delete">❌</Comment.Action>
-              <Comment.Action className="comment-edit">⚙️</Comment.Action>
+              <Comment.Action className="comment-delete">Delete</Comment.Action>
+              <Comment.Action className="comment-edit">Edit</Comment.Action>
             </Comment.Actions>
           </Comment.Content>
         </Comment>
