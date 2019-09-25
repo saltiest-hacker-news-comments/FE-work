@@ -147,9 +147,9 @@ const AboutCards = () => (
    // Header Styles
    <>
       <header style={{ backgroundColor: "red" }}>
-         <h1 class="ui large header">About</h1>
+         <h1 class="ui huge header">About</h1>
          <p>Info About App</p>
-         <h2 class="ui medium header">Meet our Team</h2>
+         <h2 class="ui header">Meet our Team</h2>
          <p class="text-content">
             Info About Team
         </p>
