@@ -1,5 +1,5 @@
 // React Stuff
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
 // Formik Stuff
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
@@ -7,18 +7,25 @@ import * as Yup from "yup";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import axios from 'axios';
 //React-strap
-import {Button, NavLink} from "reactstrap";
+import { Button, NavLink } from "reactstrap";
+import { UserContext } from '../context/UserContext';
+import ProgressLoader from './Loader';
 
 
+const Login = ({ values, errors, status, touched, handleSubmit, ProgressLoader }) => {
 
+    const { user, setUser } = useContext(UserContext);
+    // console.log("User Login: ", user)
 
-const Login = ({ values, errors, status, touched, handleSubmit }) => {
     const [logins, setLogins] = useState([]);
-    console.log("LOGINS: ", logins)
+    console.log("Login Data: ", logins)
+
+
 
     useEffect(() => {
         if (status) {
-            setLogins([[...logins, status]])
+            // setUser([[...logins, status]]);
+            setLogins([[...logins, status]]);
         }
     }, [status]);
     return (
@@ -32,19 +39,19 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
                 {touched.username && errors.username && (
                     <p className="error">{errors.username} </p>
 
-              )}
+                )}
                 <div className="loginUserPass"> 🔑 Password: </div>
                 <Field className="loginComp" type="text" name="password" placeholder="Your Password" />
                 {touched.password && errors.password && (
                     <p className="error">{errors.password} </p>
 
                 )}
-            
-            <Button className="signUpSubmitBtn submitBtn" type="submit">Login</Button>
 
-             {/* Link to SignUp If user has an Account */}
-         <NavLink className="signUpLink" href="/signup" > Don't Have an Account? Sign Up Here !</NavLink>
-            
+                <Button className="signUpSubmitBtn submitBtn" type="submit">Login</Button>
+
+                {/* Link to SignUp If user has an Account */}
+                <NavLink className="signUpLink" href="/signup"> Don't Have an Account? Sign Up Here !</NavLink>
+
             </Form>
             {/* Response */}
             {logins.map(login => (
@@ -56,12 +63,13 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
                 </div>
             ))}
         </div>
-        
+
     );
 };
 
 const FormikLogin = withFormik({
     mapPropsToValues({ username, password }) {
+        console.log(username, password);
         return {
             username: username || "",
             password: password || ""
@@ -71,13 +79,13 @@ const FormikLogin = withFormik({
     validationSchema: Yup.object().shape({
         username: Yup.string().required("Enter your username"),
         password: Yup.string().required("Enter your password")
-      }),
-    
-    handleSubmit(values, { props, setLogins }) {
+    }),
+
+    handleSubmit(values, { props, setStatus }) {
         console.log("%cUserLogin values: ", "color:orange", values)
         axiosWithAuth()
             .post('/auth/login', values)
-            .then(res => setLogins(res))
+            .then(res => setStatus(res.data))
             .then(props.history.push('/'))
             .catch(err => console.log("%cLogin Axios Err: ", "color:orange", err))
     }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Icon, Button } from "semantic-ui-react";
 
+
 const manjula = (
    <>
       <Button animated='horizontal' href="https://github.com/manjulamishra">
@@ -142,88 +143,107 @@ const shawn = (
 );
 //----------------------------------------- cards below -------------------------------------------
 const AboutCards = () => (
-   <div className="aboutStyles">
-      <Card
-         className="aboutCard"
-         image="https://avatars2.githubusercontent.com/u/8314540?s=400&v=4"
-         header="Manjula Mishra"
-         meta="Team Lead"
-         description=""
-         extra={manjula}
-      />
-      <Card
-         className="aboutCard"
-         image="https://ca.slack-edge.com/T4JUEB3ME-UL8CVG7QE-3e8911514771-72"
-         header="Aaron Scott"
-         meta="Data Engineer"
-         description=""
-         extra={aaron}
-      />
-      <Card
-         className="aboutCard"
-         image="https://avatars3.githubusercontent.com/u/6277592?s=400&v=4"
-         header="Nick Burkhalter"
-         meta="Data Engineer"
-         description=""
-         extra={nick}
-      />
-      <Card
-         className="aboutCard"
-         image="https://ca.slack-edge.com/T4JUEB3ME-UJZLU7RPX-0133bf5528e4-72"
-         header="Alfredo Quintana"
-         meta="Machine Learning Engineer"
-         description=""
-         extra={alfredo}
-      />
-      <Card
-         className="aboutCard"
-         image="https://avatars1.githubusercontent.com/u/49086915?s=400&v=4"
-         header="Derek Etman"
-         meta="Web React II"
-         description=""
-         extra={derek}
-      />
-      <Card
-         className="aboutCard"
-         image="https://ca.slack-edge.com/T4JUEB3ME-ULP6AEAF3-7aa2e18de5a8-72"
-         header="Dakotah Huey"
-         meta="Web React I"
-         description=""
-         extra={dakotah}
-      />
-      <Card
-         className="aboutCard"
-         image="https://avatars1.githubusercontent.com/u/52930131?s=400&u=b7619fa18bdb25b9beb319c6169e0fc85227e6fa&v=4"
-         header="Brandy Becker"
-         meta="Web React I"
-         description=""
-         extra={brandy}
-      />
-      <Card
-         className="aboutCard"
-         image="https://avatars0.githubusercontent.com/u/4251464?s=400&v=4"
-         header="Akak Almazbekova"
-         meta="Web React I"
-         description=""
-         extra={akak}
-      />
-      <Card
-         className="aboutCard"
-         image="https://avatars2.githubusercontent.com/u/46656679?s=400&v=4"
-         header="Kathryn Rhoads"
-         meta="Web Backend"
-         description=""
-         extra={kathryn}
-      />
-      <Card
-         className="aboutCard"
-         image="https://avatars0.githubusercontent.com/u/47621726?s=400&v=4"
-         header="Shawn McManus"
-         meta="Web Backend"
-         description=""
-         extra={shawn}
-      />
-   </div>
+
+   // Header Styles
+   <>
+      <header style={{ backgroundColor: "red" }}>
+         <h1 class="ui large header">About</h1>
+         <p>Info About App</p>
+         <h2 class="ui medium header">Meet our Team</h2>
+         <p class="text-content">
+            Info About Team
+        </p>
+      </header>
+
+     
+
+      <div className="aboutStyles">
+         <Card
+            className="aboutCard"
+            image="https://avatars2.githubusercontent.com/u/8314540?s=400&v=4"
+            header="Manjula Mishra"
+            meta="Team Lead"
+            description=""
+            extra={manjula}
+         />
+
+
+         <Card
+            className="aboutCard"
+            image="https://ca.slack-edge.com/T4JUEB3ME-UL8CVG7QE-3e8911514771-72"
+            header="Aaron Scott"
+            meta="Data Engineer"
+            description=""
+            extra={aaron}
+         />
+
+
+         <Card
+            className="aboutCard"
+            image="https://avatars3.githubusercontent.com/u/6277592?s=400&v=4"
+            header="Nick Burkhalter"
+            meta="Data Engineer"
+            description=""
+            extra={nick}
+         />
+         <Card
+            className="aboutCard"
+            image="https://ca.slack-edge.com/T4JUEB3ME-UJZLU7RPX-0133bf5528e4-72"
+            header="Alfredo Quintana"
+            meta="Machine Learning Engineer"
+            description=""
+            extra={alfredo}
+         />
+         <Card
+            className="aboutCard"
+            image="https://avatars1.githubusercontent.com/u/49086915?s=400&v=4"
+            header="Derek Etman"
+            meta="Web React II"
+            description=""
+            extra={derek}
+         />
+         <Card
+            className="aboutCard"
+            image="https://ca.slack-edge.com/T4JUEB3ME-ULP6AEAF3-7aa2e18de5a8-72"
+            header="Dakotah Huey"
+            meta="Web React I"
+            description=""
+            extra={dakotah}
+         />
+         <Card
+            className="aboutCard"
+            image="https://avatars1.githubusercontent.com/u/52930131?s=400&u=b7619fa18bdb25b9beb319c6169e0fc85227e6fa&v=4"
+            header="Brandy Becker"
+            meta="Web React I"
+            description=""
+            extra={brandy}
+         />
+         <Card
+            className="aboutCard"
+            image="https://avatars0.githubusercontent.com/u/4251464?s=400&v=4"
+            header="Akak Almazbekova"
+            meta="Web React I"
+            description=""
+            extra={akak}
+         />
+         <Card
+            className="aboutCard"
+            image="https://avatars2.githubusercontent.com/u/46656679?s=400&v=4"
+            header="Kathryn Rhoads"
+            meta="Web Backend"
+            description=""
+            extra={kathryn}
+         />
+         <Card
+            className="aboutCard"
+            image="https://avatars0.githubusercontent.com/u/47621726?s=400&v=4"
+            header="Shawn McManus"
+            meta="Web Backend"
+            description=""
+            extra={shawn}
+         />
+      </div>
+   </>
 );
 
 export default AboutCards;
