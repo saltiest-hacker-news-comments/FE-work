@@ -18,6 +18,7 @@ import { CommentList } from "./components/CommentList";
 import { UserContext } from './context/UserContext';
 
 import ProgressLoader from './components/Loader';
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
         </Switch>
       </div>
     </UserContext.Provider>
+
   );
 }
 

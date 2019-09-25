@@ -26,13 +26,16 @@ export const CommentList = (props) => {
 
     // INFO COMING IN FROM AXIOS CALL
     return (
-        <div className="divOutsideMap">
-            {saltyData.map(data => {
-                return (
-                    <div className="divInsideMap"> <CommentCard data={data} /></div>
-                );
-            })}
-        </div>
+        <section className="top-comments">
+            <h2 className="subhead">Top Comments</h2>
+            <div className="divOutsideMap">
+                {saltyData.map(data => {
+                    return (
+                        <div className="divInsideMap"> <CommentCard data={data} /></div>
+                    );
+                })}
+            </div>
+        </section>
     )
 
 };
