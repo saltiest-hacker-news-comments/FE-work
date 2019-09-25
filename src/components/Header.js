@@ -58,9 +58,8 @@ const Header = () => {
 
                             <NavItem>
                                 <NavLink tag={Link} to="/signup" activeClassName="active" active={window.location === '/signup'}>Sign Up</NavLink>
-                            </NavItem> :
-
-                                <button onClick={logOut} > Logout </button>
+                            </NavItem>
+                            <button onClick={logOut} > Logout </button>
 
                         </Nav>
                     </Navbar>
