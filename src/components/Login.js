@@ -14,6 +14,7 @@ import {Button, NavLink} from "reactstrap";
 
 const Login = ({ values, errors, status, touched, handleSubmit }) => {
     const [logins, setLogins] = useState([]);
+    console.log("LOGINS: ", logins)
 
     useEffect(() => {
         if (status) {

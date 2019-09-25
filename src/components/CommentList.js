@@ -11,10 +11,10 @@ export const CommentList = (props) => {
 
     // INFO COMING IN FROM AXIOS CALL
     return (
-        <div>
+        <div className="divOutsideMap">
             {saltyData.map(data => {
                 return (
-                    <CommentCard data={data} />
+                   <div className="divInsideMap"> <CommentCard data={data} /></div>
                 );
             })}
         </div>

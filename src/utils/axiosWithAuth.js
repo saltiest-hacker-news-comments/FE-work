@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const axiosWithAuth = () => {
+    console.log("Clicked");
     const token = localStorage.getItem('token');
 
     return axios.create({

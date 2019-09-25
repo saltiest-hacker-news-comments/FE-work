@@ -1,0 +1,283 @@
+// import React from "react";
+
+// const About = () => {
+
+//   return (
+//     <div className="main-about-container">
+//       <div className="team-container">
+//         <h1>About</h1>
+//         <p>Info about app</p>
+//         <h2>Meet our Team</h2>
+//         <p class="text-content">
+//           Meet our awesome team of Salty Hackers. We are data miners, machine
+//           learners, frontend and backend enthusiasts, Web UI lovers, Team Lead
+//           aka Lambda Students.
+//         </p>
+//         <div className="team">
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-UDLR4BNPN-0c9678d6ba84-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Manjula Mishra - Team Lead </h4>
+//             <button>
+//               <a href="https://github.com/manjulamishra">Github</a>
+//             </button>
+//           </div>
+      
+
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-UL8CVG7QE-3e8911514771-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Aaron Scott - Data Engineer </h4>
+//             <button>
+//               <a href="https://github.com/1aaronscott">Github</a>
+//             </button>
+//           </div>
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-UJEJL8C8J-a79c127e0847-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Nicholas Burkhalter - Data Engineer </h4>
+//             <button>
+//               <a href="https://github.com/Nburkhal">Github</a>
+//             </button>
+//           </div>
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-UJZLU7RPX-0133bf5528e4-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Alfredo Quintana - Machine Learning Engineer</h4>
+//             <button>
+//               <a href="https://github.com/alqu7095">Github</a>
+//             </button>
+//           </div>
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-UHDGPKDPA-78665bcefe7c-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Derek Etman - Web React II </h4>
+//             <button>
+//               <a href="https://github.com/DerekEtman">Github</a>
+//             </button>
+//           </div>
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-ULP6AEAF3-7aa2e18de5a8-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Dakotah Huey - Web React I</h4>
+//             <button>
+//               <a href="https://github.com/frescocodes">Github</a>
+//             </button>
+//           </div>
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-ULVJ810SH-c881949bb445-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Brandy Becker - Web React I</h4>
+//             <button>
+//               <a href="https://github.com/BrandyBecker/">Github</a>
+//             </button>
+//           </div>
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-ULK6ULQ0J-b2b2713290b3-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Akak Almazbekova - Web React I</h4>
+//             <button>
+//               <a href="https://github.com/Aakak">Github</a>
+//             </button>
+//           </div>
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-UHZDN5QGZ-73ecc32da8ca-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Kathryn Rhoads - Web Backend </h4>
+//             <button>
+//               <a href="">Github</a>
+//             </button>
+//           </div>
+
+//           <div className="team-members">
+//             <img
+//               src="https://ca.slack-edge.com/T4JUEB3ME-UHFU7NM4G-481847adffd7-72"
+//               alt="team-member-img"
+//             />
+//             <h4> Shawn McManus - Web Backend </h4>
+//             <button>
+//               <a href="https://github.com/ShawnM76">Github</a>
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default About;
+
+import React from "react";
+import { Card, Icon } from "semantic-ui-react";
+
+const manjula = (
+  <a src="https://github.com/manjulamishra">
+    <button>test</button>
+  </a>
+);
+
+const aaron = (
+  <a src="https://github.com/1aaronscott">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const nick = (
+  <a src="https://github.com/1aaronscott">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const alfredo = (
+  <a src="https://github.com/alqu7095">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const derek = (
+  <a src="https://github.com/DerekEtman">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const dakotah = (
+  <a src="https://github.com/frescocodes">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const brandy = (
+  <a src="https://github.com/BrandyBecker/">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const akak = (
+  <a src="https://github.com/Aakak">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const kathryn = (
+  <a src="https://github.com/rhokath">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const shawn = (
+  <a src="https://github.com/ShawnM76">
+    <img src="https://i.ibb.co/n7ZhV8f/github.png" width="55rem" />
+  </a>
+);
+
+const AboutCards = () => (
+  <div className="aboutStyles">
+    <Card
+      className="aboutCard"
+      image="https://avatars2.githubusercontent.com/u/8314540?s=400&v=4"
+      header="Manjula Mishra"
+      meta="Team Lead"
+      description=""
+      extra={manjula}
+    />
+    <Card
+       className="aboutCard"
+      image="https://ca.slack-edge.com/T4JUEB3ME-UL8CVG7QE-3e8911514771-72"
+      header="Aaron Scott"
+      meta="Data Engineer"
+      description=""
+      extra={aaron}
+    />
+    <Card
+      className="aboutCard"
+      image="https://avatars3.githubusercontent.com/u/6277592?s=400&v=4"
+      header="Nick Burkhalter"
+      meta="Data Engineer"
+      description=""
+      extra={nick}
+    />
+    <Card
+       className="aboutCard"
+      image="https://ca.slack-edge.com/T4JUEB3ME-UJZLU7RPX-0133bf5528e4-72"
+      header="Alfredo Quintana"
+      meta="Machine Learning Engineer"
+      description=""
+      extra={alfredo}
+    />
+    <Card
+      className="aboutCard" 
+      image="https://avatars1.githubusercontent.com/u/49086915?s=400&v=4"
+      header="Derek Etman"
+      meta="Web React II"
+      description=""
+      extra={derek}
+    />
+    <Card
+     className="aboutCard" 
+      image="https://ca.slack-edge.com/T4JUEB3ME-ULP6AEAF3-7aa2e18de5a8-72"
+      header="Dakotah Huey"
+      meta="Web React I"
+      description=""
+      extra={dakotah}
+    />
+    <Card
+      className="aboutCard"
+      image="https://avatars1.githubusercontent.com/u/52930131?s=400&u=b7619fa18bdb25b9beb319c6169e0fc85227e6fa&v=4"
+      header="Brandy Becker"
+      meta="Web React I"
+      description=""
+      extra={brandy}
+    />
+    <Card
+     className="aboutCard"
+      image="https://avatars0.githubusercontent.com/u/4251464?s=400&v=4"
+      header="Akak Almazbekova"
+      meta="Web React I"
+      description=""
+      extra={akak}
+    />
+    <Card
+      className="aboutCard"
+      image="https://avatars2.githubusercontent.com/u/46656679?s=400&v=4"
+      header="Kathryn Rhoads"
+      meta="Web Backend"
+      description=""
+      extra={kathryn}
+    />
+    <Card
+     className="aboutCard"
+      image="https://avatars0.githubusercontent.com/u/47621726?s=400&v=4"
+      header="Shawn McManus"
+      meta="Web Backend"
+      description=""
+      extra={shawn}
+    />
+  </div>
+);
+
+export default AboutCards;
