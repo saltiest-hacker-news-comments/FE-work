@@ -9,22 +9,21 @@ import axios from 'axios';
 //React-strap
 import { Button, NavLink } from "reactstrap";
 import { UserContext } from '../context/UserContext';
-import ProgressLoader from './Loader';
 
 
-const Login = ({ values, errors, status, touched, handleSubmit, ProgressLoader }) => {
+
+
+const Login = ({ values, errors, status, touched, handleSubmit }) => {
 
     const { user, setUser } = useContext(UserContext);
+
     // console.log("User Login: ", user)
 
+
     const [logins, setLogins] = useState([]);
-    console.log("Login Data: ", logins)
-
-
 
     useEffect(() => {
         if (status) {
-            // setUser([[...logins, status]]);
             setLogins([[...logins, status]]);
         }
     }, [status]);
@@ -69,7 +68,6 @@ const Login = ({ values, errors, status, touched, handleSubmit, ProgressLoader }
 
 const FormikLogin = withFormik({
     mapPropsToValues({ username, password }) {
-        console.log(username, password);
         return {
             username: username || "",
             password: password || ""
@@ -82,10 +80,10 @@ const FormikLogin = withFormik({
     }),
 
     handleSubmit(values, { props, setStatus }) {
-        console.log("%cUserLogin values: ", "color:orange", values)
+        console.log("UserLogin values: ", values)
         axiosWithAuth()
             .post('/auth/login', values)
-            .then(res => setStatus(res.data))
+            .then(res => localStorage.setItem("token", res.data.token))
             .then(props.history.push('/'))
             .catch(err => console.log("%cLogin Axios Err: ", "color:orange", err))
     }

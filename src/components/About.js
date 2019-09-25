@@ -146,13 +146,17 @@ const AboutCards = () => (
 
    // Header Styles
    <>
-      <header style={{ backgroundColor: "red" }}>
+      <header style={{ backgroundColor: "#F97E03" }}>
          <h1 class="ui huge header">About</h1>
          <p>Info About App</p>
-         <h2 class="ui header">Meet our Team</h2>
+         <hr class="hr"></hr>
+         <h2 class="ui large header">Meet our Team</h2>
          <p class="text-content">
-            Info About Team
+            Meet our awesome team of Salty Hackers. We are data miners, machine
+           learners, frontend and backend enthusiasts, Web UI lovers, Team Lead
+          aka Lambda Students.
         </p>
+         <hr class="hr hr-bottom"></hr>
       </header>
 
       <div className="aboutStyles">
