@@ -189,9 +189,6 @@ White: #FFFFFF;
 }
 
 /* -------------------------------------------------------------------------------- */
-
-
-
 /* About.js CSS Below-------------------------------------------------------------- */
 
 
@@ -231,29 +228,30 @@ White: #FFFFFF;
   .aboutCard{
     width: 15rem !important;
     margin: 1rem !important;
-
   }
-  .aboutStyles .aboutCard{
+  .aboutCard:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 1rem #4A3E36 !important;
+    border: 1px solid #4A3E36 !important;
+  }
+
+
+  .aboutCard{
     font-size: 1.2rem;
+    border: 3px solid white !important;
+    margin: 2rem !important;
+    
   }
 
   .stylesGH{
-    width: 9rem !important;
+    width: 8.7rem !important;
+    
   }
 
   .stylesLI{
-    width: 5rem !important;
+    width: 4.7rem !important;
     
-  }
-  
-
-  /* Landing CSS Below------------------------------------------------------------- */
-
-.jumbotron {
-  margin: 0;
-}
-
-.jumbo-head {
+  }.jumbo-head {
   color: #fff;
   font-size: 5rem;
   font-weight: bold;
