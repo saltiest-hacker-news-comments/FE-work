@@ -257,19 +257,31 @@ White: #FFFFFF;
   font-weight: bold;
 }
 
-.jumbo-subhead {
+.subhead {
   color: #fff;
 }
 
 .top-users {
   background-color: #F97E03;
+  border-radius: 20px;
   padding: 2%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .top-users-head {
   color: #fff;
   font-weight: bold;
 }
+
+.top-comments {
+  background-color: #F97E03;
+  border-radius: 20px;
+  padding: 2%;
+  width: 80%;
+  margin: 0 auto 2%;
+}
+
 
 /*--------------------------------------------------------------------------------- */
 /* commentList below -------------------------------------------------------------- */
@@ -291,7 +303,7 @@ White: #FFFFFF;
 .divInsideMap {
   background-color: white;
   text-align: left;
-  width: 50rem;
+  width: 60%;
   border-radius: 2em;
   margin: 0.5rem;
   padding: 1rem;
@@ -356,7 +368,21 @@ White: #FFFFFF;
   padding: 7px 15px;
 }
 
+
 .comment-edit{
   background:#4682B4;
   padding: 7px 15px;
+}
+
+.accountWrapper {
+  background: #F97E03;
+} */
+
+
+
+
+/* Footer Styles below ---------------------------------------------------------------*/
+footer {
+  padding: 1%;
+  background-color: #4A3E36
 }
