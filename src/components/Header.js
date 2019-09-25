@@ -3,12 +3,10 @@ import React from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 // Layout Stuff
 import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
-import { checkbox } from 'semantic-ui-react';
+import { Checkbox } from 'semantic-ui-react';
 // component Stuff
 import { useDarkMode } from '../hooks/useDarkMode';
-// import {DarkModeSlider} from './DarkModeSlider/DarkModeSlider.js';
-
-
+import {DarkModeSlider} from './DarkModeSlider/DarkModeSlider.js';
 
 
 const Header = () => {
@@ -60,7 +58,7 @@ const Header = () => {
                 <Row>
                     <Col>
                         <div className="ui fitted slider checkbox">
-                        <input type="checkbox"  readOnly="" tabIndex="" onClick={toggleDark} className={darkMode ? 'toggle toggled' : 'toggle' }/>
+                        <input type="checkbox"  readOnly="" tabIndex="0" onClick={toggleDark} class="hidden" className={darkMode ? 'toggle toggled' : 'toggle' }/>
                             <label />
                         </div>
                     </Col>

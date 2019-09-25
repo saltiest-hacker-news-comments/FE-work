@@ -1,8 +1,8 @@
 // React Stuff
-import React, {useEffect} from 'react';
-import { Route, Switch} from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Route, Switch } from "react-router-dom";
 // Axios Stuff
-import axiosWithAuth  from './utils/axiosWithAuth';
+import axiosWithAuth from './utils/axiosWithAuth';
 // Styling
 import './App.css';
 // Component Imports
@@ -30,15 +30,15 @@ function App() {
     <div className="App">
       <Header />
       {/* <FormikLogin /> */}
-      
+
       <Switch>
-        <Route exact path="/" component={Landing}/>
-        <Route exact path="/signup" component={SignUp}/>
-        <Route exact path="/login"  component={FormikLogin}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/commentList"  component={CommentList} />
-        <Route exact path="/account"  component={AccountList}/> 
-        {/* <PrivateRoute exact path="/account"  component={AccountList}/> */}
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/login" component={FormikLogin} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/commentList" component={CommentList} />
+        <PrivateRoute exact path="/account" component={AccountList} />
+
       </Switch>
 
       <Footer />
