@@ -1,50 +1,60 @@
 import React from "react"
-import { Container,Card, CardImg, Row, Col, Collapse, Navbar, Jumbotron, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
 import TopUserCard from "./TopUserCard"
+import { Card, GridColumn } from "semantic-ui-react";
 
 export const UsersInfo = [
     {
         id: 1,
-        name: 'Salty Samuel',
-        portrait: 'https://i.pinimg.com/originals/5d/f8/d1/5df8d1fc925238142d22c84b7929123b.jpg',
+        name: 'Salty Sammy',
+        portrait: 'https://semantic-ui.com/images/avatar2/large/matthew.png',
         bio: 'Sponsored by Morton\'s',
         comment: 'No one is saltier than me.',
     },
     {
         id: 2,
         name: `Lasagna Larry`,
-        portrait: 'https://www.thewholesomedish.com/wp-content/uploads/2018/07/Best-Lasagna-550.jpg',
+        portrait: 'https://semantic-ui.com/images/avatar2/large/molly.png',
         bio: `Delicious italian dish.`,
         comment: 'Lasagna is NOT salty. Ever.'
     },
     {
         id: 3,
         name: 'Pete Zaroll',
-        portrait: 'https://66.media.tumblr.com/30eb1987dd415c3305296f8dcb68d9aa/tumblr_ov59u11B4W1ttsiu4o1_400.gif',
+        portrait: 'https://semantic-ui.com/images/avatar2/large/elyse.png',
         bio: `Totino's Brand Ambassador`,
-        comment: `“Let me explain something to you. Um, I am not Mr. Lebowski. You're Mr. Lebowski. I'm the Dude. So that’s what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you’re not into the whole brevity thing.”`,
+        comment: `I'm the Dude. So that’s what you call me.`,
     },
     {
         id: 4,
         name: 'Dorito Dan',
-        portrait: 'https://www.dollargeneral.com/media/catalog/product/cache/image/beff4985b56e3afdbeabfc89641a4582/0/0/00028400420716_0.jpg',
+        portrait: 'https://semantic-ui.com/images/avatar/large/elliot.jpg',
         bio: 'Cool Ranch Doritos >>>>',
-        comment: `"The Dude abides. I don't know about you, but I take comfort in that, knowin' he’s out there. The Dude. Takin' 'er easy for all us sinners."`
-    }
+        comment: `The Dude abides. I don't know about you, but I take comfort in that...`
+    },
 
 ];
 
 
-export const  TopUsers = () => {
+export const TopUsers = () => {
+    
+    // useState here
+    // axios here
+
     return (
-        UsersInfo.map( user => {
-            return ( 
-                <TopUserCard
-                key={user.id}
-                portrait = {user.portrait}
-                name={user.name}
-                comment={user.comment} />
-            )
-        })
+        <section className="top-users">
+            <h2 className="top-users-head">Saltiest Users</h2>
+                <Card.Group style={{margin: '0 auto'}}>
+                    {UsersInfo.map( user => {
+                        return (
+                            <TopUserCard
+                            key={user.id}
+                            portrait = {user.portrait}
+                            name={user.name}
+                            bio={user.bio}
+                            comment={user.comment} />
+                        )
+                    })}
+                </Card.Group>
+        </section>
     )
 }

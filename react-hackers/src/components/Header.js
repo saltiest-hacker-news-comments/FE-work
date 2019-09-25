@@ -1,7 +1,12 @@
+// React Stuff
 import React from 'react';
 import { Route, Switch, Link } from "react-router-dom";
-import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
+// Layout Stuff
+import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import { checkbox } from 'semantic-ui-react';
+// component Stuff
 import { useDarkMode } from '../hooks/useDarkMode';
+// import {DarkModeSlider} from './DarkModeSlider/DarkModeSlider.js';
 
 
 
@@ -11,6 +16,7 @@ const Header = () => {
     const [darkMode,setDarkMode] = useDarkMode(false);
     
     const toggleDark = e => {
+        console.log("CLICKED DARK");
         e.preventDefault();
         setDarkMode(!darkMode);
     };
@@ -23,11 +29,11 @@ const Header = () => {
     // }
 
     return (
-        <header >
+        <header  >
             
                 <Row>
                     <Col>
-                        <Navbar color="light" light expand="sm">
+                        <Navbar color="light" className="header" light expand="sm">
                             <NavbarBrand tag={Link} to="/">
                                 <img className="logo" src="https://trello-attachments.s3.amazonaws.com/5d89a54e06bb0a3a361741e9/975x347/87efc95a769db28dc466ae69284802fd/Salt_full_logo.png" />
                             </NavbarBrand>
@@ -49,6 +55,14 @@ const Header = () => {
                                 </NavItem>
                             </Nav>
                         </Navbar>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="ui fitted slider checkbox">
+                        <input type="checkbox"  readOnly="" tabIndex="" onClick={toggleDark} className={darkMode ? 'toggle toggled' : 'toggle' }/>
+                            <label />
+                        </div>
                     </Col>
                 </Row>
             

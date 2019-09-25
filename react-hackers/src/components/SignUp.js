@@ -10,36 +10,36 @@ import {
   } from "reactstrap";
 
 //Formik
-import { withFormik, Form, Field } from "formik";
-
-//Yup
-import * as Yup from "yup";
+import {Form} from "formik";
 
 //Axios
 import axios from "axios";
 import axiosWithAuth from "../utils/axiosWithAuth";
 
 /* Component ------------------------------------------------------------------------------------------------------ */
-const SignUp =({ touched, status, errors, values })=> {
+const SignUp =(props)=> {
 
-    const [users,setUsers] = useState({username:'', password:''});
+    const [users,setUsers] = useState([]);
+
+    console.log("USERS: ", users);
 
     const handleChange = e => {
-        setUsers({
-            ...users,
-            [e.target.name]: e.target.values
+        console.log('here in the handleChange ', e.target.value);
+        setUsers({...users,[e.target.name]: e.target.value
         });
     };
 
+    
+
     const handleSubmit = e => {
-        e.preventDefault();
         console.log("CLICKED!");
         axiosWithAuth()
         .post('/auth/register', {username: users.username, password: users.password})
-        .then( res => {
-            console.log('%c UserSignUp Res: ', 'color:green', res)
-        })
+        // .then(res => setUsers(res))
+        .then( res => console.log('%c UserSignUp Res: ', 'color:green', res))
+        .then( props.history.push("/login"))
         .catch( err => console.log('%c UserSignUp Err: ', 'color:green', err))
+        e.preventDefault();
     };
 
     return (
@@ -48,36 +48,17 @@ const SignUp =({ touched, status, errors, values })=> {
 
         <h2 className="headerStyles signUpHeaderStyles">Don't Have an Account? Sign Up Below !</h2>
 
-        {/*<FormGroup className="signUpInput">
-             <Label> 🥨 First Name: </Label>
-             <Input type="text" name="firstName" placeholder="First Name" onChange={handleChange}/>
-         </FormGroup>
-
-
-         <FormGroup className="signUpInput">
-             <Label> 🥨 Last Name: </Label>
-             <Input type="text" name="lastName" placeholder="Last Name" onChange={handleChange}/>
-         </FormGroup> */}
-
-
         <FormGroup className="signUpInput">
              <Label> 🧂 Username: </Label>
-             <Input type="text" name="username" placeholder="Username" onChange={handleChange}/>
+             <Input type="text" name="username" placeholder="Username" onChange={handleChange} value={users.username}/>
         </FormGroup>
-
-
-         {/* <FormGroup className="signUpInput">
-             <Label> 📧 E-Mail: </Label>
-             <Input type="email" name="email" placeholder="E-Mail" onChange={handleChange}/>
-         </FormGroup>
-          */}
 
          <FormGroup className="signUpInput">
              <Label> 🔑 Password: </Label>
-             <Input type="password" name="password" placeholder="Password" onChange={handleChange}/>
+             <Input type="password" name="password" placeholder="Password" onChange={handleChange} value={users.password}/>
          </FormGroup>
 
-         <button className="signUpSubmitBtn submitBtn">Submit ✔️</button>
+         <button className="signUpSubmitBtn submitBtn" type="submit">Submit ✔️</button>
 
         </Form>
 
@@ -88,3 +69,22 @@ const SignUp =({ touched, status, errors, values })=> {
 }
 
 export default SignUp;
+
+
+
+
+        {/*<FormGroup className="signUpInput">
+             <Label> 🥨 First Name: </Label>
+             <Input type="text" name="firstName" placeholder="First Name" onChange={handleChange}/>
+         </FormGroup>
+
+
+         <FormGroup className="signUpInput">
+             <Label> 🥨 Last Name: </Label>
+             <Input type="text" name="lastName" placeholder="Last Name" onChange={handleChange}/>
+         </FormGroup> *
+          <FormGroup className="signUpInput">
+             <Label> 📧 E-Mail: </Label>
+             <Input type="email" name="email" placeholder="E-Mail" onChange={handleChange}/>
+         </FormGroup>
+          */}

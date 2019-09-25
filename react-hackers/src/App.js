@@ -12,11 +12,9 @@ import SignUp from "./components/SignUp";
 import FormikLogin from "./components/Login";
 import About from "./components/About";
 import Landing from "./components/LandingPage/Landing";
-import Account from "./components/Account";
+import AccountCard from "./components/AccountCard";
+import AccountList from "./components/AccountList";
 import { CommentList } from "./components/CommentList";
-import { TopUsers } from "./components/LandingPage/TopUsers"
-
-
 
 function App() {
 
@@ -38,8 +36,9 @@ function App() {
         <Route exact path="/login"  component={FormikLogin}/>
         <Route exact path="/about" component={About}/>
         <Route exact path="/commentList"  component={CommentList} />
-        <PrivateRoute exact path="/account"  component={Account}/>
-        
+        <Route exact path="/account"  component={AccountCard}/>
+        <Route exact path="/account"  component={AccountList}/> 
+        {/* <PrivateRoute exact path="/account"  component={AccountList}/> */}
       </Switch>
     </div>
   );

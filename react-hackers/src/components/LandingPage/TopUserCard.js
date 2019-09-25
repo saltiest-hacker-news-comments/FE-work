@@ -1,18 +1,18 @@
 import React from "react"
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Container, Col, Row} from "reactstrap"
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 
 function TopUserCard( props ) {
+    // console.log("PROPS: ", props);
     return (
-        <Card style={{width: `30%`}}>
-            <CardImg top width='100%' src={props.portrait} alt='top-user-img' style={{maxHeight: `200px`, objectFit:`cover`}}/>
-            <CardBody>
-                <CardTitle>{props.name}</CardTitle>
-                <CardSubtitle>Bio: {props.bio}</CardSubtitle>
-                <CardText>Comment: {props.comment}</CardText>
-            </CardBody>
-        </Card>
-      
+        <Card style={{margin: 'auto'}}>
+            <Image src={props.portrait} alt='top-user-img' wrapped ui={false}/>
+            <Card.Content>
+                <Card.Header>{props.name}</Card.Header>
+                <Card.Meta>{props.bio}</Card.Meta>
+                <Card.Description>Comment: "{props.comment}"</Card.Description>
+            </Card.Content>
+        </Card>   
     )
 }
 

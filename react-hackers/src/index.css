@@ -14,14 +14,18 @@ code {
 
 
 /* ---------------- DARK MODE -----------------------------------------------------*/
+.dark-mode__toggle{
+  position: relative;
+  display: inline
+}
 
 .dark-mode {
   color:#fff;
-  background-color:#4A3E36;
+  background-color:#000000;
   
 }
 
-.dark-mode header {
+.dark-mode .header {
   color:#fff;
   background-color: #998070;
 }
@@ -83,7 +87,7 @@ White: #FFFFFF;
 
 /* Have an Account? Log In ! Link */
 .logInLink{
-  width: 30rem;
+  width: 35rem;
   color:  white;
   border: 3px dotted #998070;;
   background-color: #998070;
@@ -92,6 +96,7 @@ White: #FFFFFF;
   padding: 1rem;
   font-weight: bold;
   margin: 2rem;
+  height: 3rem;
 }
 .logInLink:hover{
   color: white;
@@ -102,9 +107,9 @@ White: #FFFFFF;
 
 /* Don't Have An Account? Sign Up Here! */
 .signUpLink{
-  width: 30rem;
+  width: 35rem;
   color:  white;
-  border: 3px dotted #998070;;
+  border: 3px dotted #998070;
   background-color: #998070;
   border-radius: 3em;
   font-size: 1.6rem;
@@ -112,6 +117,7 @@ White: #FFFFFF;
   font-weight: bold;
   margin: 2rem;
   margin-top: 4rem;
+  height: 3rem;
 }
 .signUpLink:hover{
   color: white;
@@ -156,9 +162,9 @@ White: #FFFFFF;
 }
 
 .headerStyles{
-  width: 30rem;
+  width: 40rem;
   color:  white;
-  border: 3px dotted #4A3E36;;
+  border: 3px dotted #4A3E36;
   background-color: #4A3E36;
   border-radius: 3em;
   font-size: 1.6rem;
@@ -175,7 +181,7 @@ White: #FFFFFF;
 /* Header.js CSS Below------------------------------------------------------------- */
 
 .active {
-  color: orange;
+  color: #F97E03;
 }
 
 .logo {
@@ -212,10 +218,27 @@ White: #FFFFFF;
     height: 150px;
   }
 
+  .aboutStyles {
+    text-align: left;
+    background-color: #F97E03;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    justify-items: center;
+ 
+  }
 
-
+  .aboutStyles .aboutCard{
+    
+    font-size: 1.5rem;
+  }
 
   /* Landing CSS Below------------------------------------------------------------- */
+
+.jumbotron {
+  margin: 0;
+}
 
 .jumbo-head {
   color: #fff;
@@ -227,17 +250,112 @@ White: #FFFFFF;
   color: #fff;
 }
 
-/*--------------------------------------------------------------------------------- */
-/* commentList below ----------------------------------------------------------------*/
+.top-users {
+  background-color: #F97E03;
+  padding: 2%;
+}
 
-.commentComponent {
+.top-users-head {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------------------------------- */
+/* commentList below -------------------------------------------------------------- */
+
+
+/*  div located in CommentList outside .map */
+.divOutsideMap {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F97E03;
+  padding: 2rem;
+}
+
+
+/*  div located in CommentList inside .map */
+
+.divInsideMap {
+  background-color: white;
   text-align: left;
+  width: 50rem;
+  border-radius: 2em;
+  margin: 0.5rem;
+  padding: 1rem;
 }
-.commentIMG{
-  max-width: 100%;
+
+.divInsideMap:hover{
+  transform: scale(1.03);
+  box-shadow: 0 0 2rem #4A3E36;
+  border: 2px solid #998070;
 }
-.commentImg img {
-  width: 5rem;
+
+/* changing comment text size */
+.commentComponent{
+  font-size: 1.4rem;
+}
+
+/* Save  on Comments */
+.commentSave{
+  background-color: #998070;
+  padding: 0.4rem;
+  border-radius: 0.5em;
+}
+
+.commentSave:hover{
+  transform: scale(1.1);
+}
+
+/* Up Vote Comments */
+.commentUpVote {
+  background-color: #998070;
+  padding: 0.4rem;
+  border-radius: 0.5em;
+}
+.commentUpVote:hover{
+  transform: scale(1.1);
+
+}
+
+/* Down Vote Comments */
+.commentDownVote{
+  background-color: #998070;
+  padding: 0.4rem;
+  border-radius: 0.5em;
+}
+.commentDownVote:hover{
+  transform: scale(1.1);
+
+}
+
+.usernameFontWeight{
+  font-weight: bolder	;
+  border-bottom: 1px solid #4A3E36;
+  padding: 0.5rem;
 }
 
 /* -------------------------------------------------------------------------------------*/
+
+/* .welcomeHeader {
+  display: flex;
+  background: white;
+  width: 40rem;
+  border-radius: 3em;
+  justify-content: center;
+  margin: 2rem;
+  padding: 1rem;
+} */
+
+/* .accountStyles {
+  background: red;
+}
+
+.accountStylesPart2{
+  background: green;
+}
+
+.accountWrapper {
+  background: #F97E03;
+} */
