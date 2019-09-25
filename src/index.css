@@ -221,18 +221,31 @@ White: #FFFFFF;
   .aboutStyles {
     text-align: left;
     background-color: #F97E03;
-    padding: 5rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: auto;
     justify-items: center;
  
   }
 
-  .aboutStyles .aboutCard{
-    
-    font-size: 1.5rem;
+  .aboutCard{
+    width: 15rem !important;
+    margin: 1rem !important;
+
   }
+  .aboutStyles .aboutCard{
+    font-size: 1.2rem;
+  }
+
+  .stylesGH{
+    width: 9rem !important;
+  }
+
+  .stylesLI{
+    width: 5rem !important;
+    
+  }
+  
 
   /* Landing CSS Below------------------------------------------------------------- */
 
