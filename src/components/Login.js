@@ -17,14 +17,14 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
 
     const { user, setUser } = useContext(UserContext);
 
-    // console.log("User Login: ", user)
-
 
     const [logins, setLogins] = useState([]);
+    // console.log("User Login: ", logins)
 
     useEffect(() => {
         if (status) {
-            setLogins([[...logins, status]]);
+            setLogins([...logins, status]);
+            setUser(status.message);
         }
     }, [status]);
     return (
@@ -79,12 +79,18 @@ const FormikLogin = withFormik({
         password: Yup.string().required("Enter your password")
     }),
 
-    handleSubmit(values, { props, setStatus }) {
-        console.log("UserLogin values: ", values)
+    handleSubmit(values, { props, setStatus, setUser }) {
+        // console.log("UserLogin values: ", values)
         axiosWithAuth()
             .post('/auth/login', values)
-            .then(res => localStorage.setItem("token", res.data.token))
-            .then(props.history.push('/'))
+            .then(res => {
+                setStatus(res.data);
+                console.log(res);
+                // setUser(values);
+                localStorage.setItem("token", res.data.token);
+                props.history.push('/account')
+
+            })
             .catch(err => console.log("%cLogin Axios Err: ", "color:orange", err))
     }
 })(Login);

@@ -30,6 +30,17 @@ code {
   background-color: #998070;
 }
 
+.darkRow {
+  justify-content: flex-end;
+}
+
+.darkWrap {
+  display:flex;
+  flex-direction: row;
+  margin-right: 5%; 
+  /* align-items: flex-start; */
+}
+
 /* Sign Up CSS Below --------------------------------------------------------------*/
 
 /* Color HexCodes: **
@@ -364,20 +375,36 @@ White: #FFFFFF;
 /*--------------------------------------------------------------------------------- */
 /* About.js Header styles -------------------------------------------------------------- */
 
+.about-header{
+  background-color:  #F97E03;
+}
+
+.about-content{
+  width: 55%;
+  margin: 0 auto;
+}
 .hr{
  border: 1px solid white;
- width: 60%;
+ width: 100%;
 }
 
 .hr-bottom{
   margin-bottom: 0;
 }
 
-.
+.text-content{
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.3;
+  padding-bottom: 15px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
 
 
-
-/*--------------------------------------------------------------------------------- */
+footer{
+  background-color: #4A3E36;
+}/*--------------------------------------------------------------------------------- */
 /* AccountCard styles -------------------------------------------------------------- */
 
 .comment-delete{

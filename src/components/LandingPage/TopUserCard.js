@@ -1,12 +1,12 @@
 import React from "react"
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Image } from 'semantic-ui-react'
 
 
-function TopUserCard( props ) {
+function TopUserCard(props) {
     // console.log("PROPS: ", props);
     return (
         <Card className="centered">
-            <Image src={props.portrait} alt='top-user-img' wrapped ui={false}/>
+            <Image src={props.portrait} alt='top-user-img' wrapped ui={false} />
             <Card.Content>
                 <Card.Header>{props.name}</Card.Header>
                 <Card.Meta>{props.bio}</Card.Meta>

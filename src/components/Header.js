@@ -59,7 +59,9 @@ const Header = () => {
                             <NavItem>
                                 <NavLink tag={Link} to="/signup" activeClassName="active" active={window.location === '/signup'}>Sign Up</NavLink>
                             </NavItem>
+
                             <button onClick={logOut} > Logout </button>
+
 
                         </Nav>
                     </Navbar>
@@ -67,10 +69,18 @@ const Header = () => {
             </Row>
             <Row>
                 <Col>
-                    <div className="ui fitted slider checkbox">
-                        <input type="checkbox" readOnly="" tabIndex="0" onClick={toggleDark} class="hidden" className={darkMode ? 'toggle toggled' : 'toggle'} />
-                        <label />
-                    </div>
+                    <Row className="darkRow">
+                        <div className="darkWrap">
+                            <p> Salt </p>
+
+                            <div className="ui fitted slider checkbox">
+                                <input type="checkbox" readOnly="" tabIndex="0" onClick={toggleDark} class="hidden" className={darkMode ? 'toggle toggled' : 'toggle'} />
+                                <label />
+                            </div>
+
+                            <p> Pepper </p>
+                        </div>
+                    </Row>
                 </Col>
             </Row>
 
