@@ -24,7 +24,7 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
     useEffect(() => {
         if (status) {
             setLogins([...logins, status]);
-            setUser(status.message);
+            setUser(status);
         }
     }, [status]);
     return (

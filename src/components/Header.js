@@ -16,7 +16,7 @@ const Header = () => {
     const [darkMode, setDarkMode] = useDarkMode(false);
 
     const toggleDark = e => {
-        console.log("CLICKED DARK");
+        // console.log("CLICKED DARK");
         e.preventDefault();
         setDarkMode(!darkMode);
     };

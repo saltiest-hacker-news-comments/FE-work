@@ -22,13 +22,16 @@ import Footer from "./components/Footer"
 
 function App() {
 
+  // get a list of users: https://salty-hackers.herokuapp.com/api/users/list
+
+
   const [user, setUser] = useState([]);
   console.log("%cAPP user: ", "color:blue", user);
 
-  // const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
+  const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
 
   return (
-    <UserContext.Provider value={{ user, setUser }} >
+    <UserContext.Provider value={providerValue} >
       <div className="App">
 
 
@@ -42,7 +45,8 @@ function App() {
           <Route exact path="/login" component={FormikLogin} />
           <Route exact path="/about" component={About} />
           <Route exact path="/commentList" component={CommentList} />
-          <PrivateRoute exact path="/account" component={AccountList} />
+          <Route exact path="/account" component={AccountList} />
+          {/* <PrivateRoute exact path="/account" component={AccountList} /> */}
 
 
         </Switch>

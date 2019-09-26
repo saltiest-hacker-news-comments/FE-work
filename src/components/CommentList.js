@@ -11,7 +11,7 @@ import axios from "axios";
 export const CommentList = (props) => {
     const [saltyData, setSaltyData] = useState(UsersInfo);
     const [commentList, setCommentList] = useState([]);
-    // console.log("COMMENT LIST: ", setCommentList);
+    console.log("COMMENT LIST: ", commentList);
 
 
     useEffect(() => {
@@ -39,5 +39,3 @@ export const CommentList = (props) => {
     )
 
 };
-
-
