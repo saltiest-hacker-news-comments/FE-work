@@ -11,15 +11,15 @@ import axios from "axios";
 export const CommentList = (props) => {
     const [saltyData, setSaltyData] = useState(UsersInfo);
     const [commentList, setCommentList] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState();
     const [searchResults, setSearchResults] = useState([])
 
-    console.log("COMMENT LIST: ", commentList);
+    // console.log("COMMENT LIST: ", commentList);
 
     const handleChange = event => {
         // console.log("SEARCH: ", event.target.value)
         setSearchTerm(event.target.value)
-        console.log("SEARCH TERM: ", searchTerm)
+        // console.log("SEARCH TERM: ", searchTerm)
     }
 
     useEffect(() => {
@@ -32,15 +32,35 @@ export const CommentList = (props) => {
             .catch(err => console.log(err))
     }, [])
 
-    useEffect(() => {
-        const results = commentList.filter(comment => {
-            commentList.toLowerCase().includes(searchTerm)
-        }
-        )
-        console.log("RESULTS ", results)
-        setSearchResults(results);
+    // useEffect(() => {
+    //     // console.log("CommentList: ", commentList);
 
-    }, [])
+    //     const results = commentList.map(comment => {
+    //         console.log("COMMENT: ", comment)
+    //         console.log("Searchterm: ", searchTerm)
+
+    //         const test = comment.author.toLowerCase();
+    //         console.log("TEST: ", test)
+    //         if (test === /searchTerm/i) {
+    //             console.log(true)
+    //             return comment;
+    //         } else {
+    //             console.log(false)
+    //         }
+    //     })
+    //     // setSearchResults(results);
+    //     console.log("RESULTS ", results)
+
+    // }, [searchTerm])
+
+    useEffect(() => {
+
+        const results = commentList.filter(comment =>
+            comment.author.toLowerCase().includes(searchTerm)
+        )
+        // console.log("RESULTS: ", results) // empty array
+        setSearchResults(results)
+    }, [searchTerm])
 
 
     return (
@@ -61,7 +81,7 @@ export const CommentList = (props) => {
             <div className="divOutsideMap">
                 {searchResults.map(data => {
                     return (
-                        <div className="divInsideMap"> <CommentCard key={data.id} author={data.author} data={data} comment={data.text} score={data.score} /></div>
+                        <div className="divInsideMap"> <CommentCard key={data.id} author={data.author} comment={data.text} score={data.score} data={data} /></div>
                     );
                 })}
             </div>
