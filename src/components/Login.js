@@ -15,7 +15,7 @@ import { UserContext } from '../context/UserContext';
 
 const Login = ({ values, errors, status, touched, handleSubmit }) => {
 
-    const { user, setUser } = useContext(UserContext);
+    const { setUser } = useContext(UserContext);
 
 
     const [logins, setLogins] = useState([]);

@@ -16,9 +16,11 @@ import AccountCard from "./components/AccountCard";
 import AccountList from "./components/AccountList";
 import { CommentList } from "./components/CommentList";
 import { UserContext } from './context/UserContext';
+// import { SemanticNav } from "./components/SemanticNav"
 
 import ProgressLoader from './components/Loader';
 import Footer from "./components/Footer"
+import NavCondition from './components/Navs/NavCondition';
 
 function App() {
 
@@ -29,12 +31,13 @@ function App() {
   console.log("%cAPP user: ", "color:blue", user);
 
   const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
+  
 
   return (
     <UserContext.Provider value={providerValue} >
       <div className="App">
 
-
+        {/* <SemanticNav /> */}
         <Header />
         {/* <FormikLogin /> */}
 
@@ -43,9 +46,11 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/login" component={FormikLogin} />
+
           <Route exact path="/about" component={About} />
           <Route exact path="/commentList" component={CommentList} />
           <Route exact path="/account" component={AccountList} />
+          <Route path="/navCondition" component={NavCondition} />
           {/* <PrivateRoute exact path="/account" component={AccountList} /> */}
 
 

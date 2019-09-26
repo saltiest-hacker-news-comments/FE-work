@@ -1,68 +1,95 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Saltiest Hacker News Trolls
 
-## Available Scripts
+## PITCH
+Build an app that uses Hacker News comment data to rank commenters based on comment sentiment (saltiness/negativity).
 
-In the project directory, you can run:
+## MVP
+App rates and ranks hacker news commenters by negativity of comment sentiment (limited to commenters who have made x number of posts). Allows users to search by username to view comments and sentiment levels of specific users.
 
-### `npm start`
+- User creation/login flow
+- User can view a feed of negative comments from DS API
+- User can save their favorite salty comments to the backend
+- User can delete saved comments
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### STRETCH
+App also displays the sentiment of individual comments by user allowing drilldown to a user view.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Web:
+- Create a way to share the funniest/worst trolls on twitter.
+- Use filter to display the cards in different ways depending on what the user wants to see and what is available in the DS API (ie funniest, most sarcastic, etc.)
+- Create a way to visualize the trolls that show up most frequently in a given time period.
 
-### `npm test`
+ 
+Hacker's Saltiest 2019
+Proposal
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+What problem does your app solve?
+Our app uses Hacker News comment data to rank comments based on the comment sentiment (saltiness/negativity).
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Be as specific as possible; how does your app solve the problem?
+WITH CODE
+By compiling data from the backend we can rate commenters saltiest post. 
+ 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+What is the mission statement?
+To bring justice to the world by rating the salties comments
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+What features are required for your minimum viable product?
+App rates and ranks hacker news commenters by negativity of comment sentiment (limited to commenters who have made x number of posts). Allows users to search by username to view comments and sentiment levels of specific users.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Web:
+ User creation/login flow
+ User can view a feed of negative comments from DS API
+ User can save their favorite salty comments to the backend
+ User can delete saved comments
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## What features may you wish to put in a future release?
+- Top Favorite Posts
+- Front Page Display
+- Attach your account?
+- Get a saltiness score
+- 1-5 crackers
+- User types in a comment
+- Processed through algorithm
+- Spits back a score
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+What do the top 3 similar apps do for their users?
+Design - Planning
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Optional but highly recommended Please refer to this document:
+Build Weeks: Planning & Design Worksheet (How to build a beautiful application)
+What design system will you use?
+Styled-components
+Sass
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## What will your user flow be?
+- User lands on front page
+- User Creates account + logs in
+- Redirects to User account
+- User can save their favorite comments
+- Delete favorite comments
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## Frameworks - Libraries
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### What 3rd party frameworks/libraries are you considering using?
+    - ReactStrap
+    - SemanticUI
+    - Axios
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Target Audience
 
-### Advanced Configuration
+    - Lambda Instructors
+    - Age: 20-30
+    - Hacker News Users (you know who you are)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

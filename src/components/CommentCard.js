@@ -31,7 +31,7 @@ const CommentCard = (props) => {
     <Comment.Group >
       <Comment className="commentComponent">
         <Comment.Avatar className="commentIMG" as='a' src={userPortraitSubstitute} alt="salty user" />
-        <Comment.Content>
+        <Comment.Text>
                                   {/*VV Using author instead of props.author  VV*/}
           <Comment.Author className="usernameFontWeight"> {author}</Comment.Author>
           <Comment.Text className="userScore">Score: {score.toFixed(3) * 1000 /* multiply by 1000 because a score of -1.672 isn't quite as cool as -1672 */}</Comment.Text>
@@ -49,7 +49,7 @@ const CommentCard = (props) => {
                 Full-screen
               </Comment.Action> */}
           </Comment.Actions>
-        </Comment.Content>
+        </Comment.Text>
       </Comment>
     </Comment.Group>
   </>
