@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AccountCard from './AccountCard';
 import axiosWithAuth from '../utils/axiosWithAuth';
-// import { UsersInfo } from './LandingPage/TopUsers';
+// import { UsersInfo } from './LandingPage/TopUsers'; 
 import { UserContext } from '../context/UserContext';
 import { Comment } from 'semantic-ui-react';
 
@@ -29,7 +29,6 @@ const AccountList =  ( props ) => {
   return (
     <div>
       <h1>{user.message}</h1>
-
         <div className="divOutsideMap">
             <h3>Your Saved Comments</h3>
             <div className="divInsideMap">

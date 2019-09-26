@@ -1,78 +1,38 @@
 // React Stuff
-import React from 'react';
+import React, { useContext } from 'react';
 import { Route, Switch, Link } from "react-router-dom";
-// Layout Stuff
+// Layout Stuf
 import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
-import { Checkbox } from 'semantic-ui-react';
+import { Checkbox, Menu } from 'semantic-ui-react';
 // component Stuff
 import { useDarkMode } from '../hooks/useDarkMode';
-import { DarkModeSlider } from './DarkModeSlider/DarkModeSlider.js';
-
+import { UserContext } from '../context/UserContext';
+// Nav Change 
+// import NavCondition from './Navs/NavCondition';
+import LoggedIn from './Navs/LoggedOut';
+import LoggedOut from './Navs/LoggedIn';
+import NavCondition from './Navs/NavCondition';
 
 const Header = () => {
-    // const loggedIn(props) {
-    //     const isLoggedIn = props.isLoggedIn;
-    //     if (isLoggedIn) {
-    //         // loggedIn
-    //     }
-    //     // return loggedOut
-    // }
-
     const [darkMode, setDarkMode] = useDarkMode(false);
 
     const toggleDark = e => {
-        // console.log("CLICKED DARK");
         e.preventDefault();
         setDarkMode(!darkMode);
     };
 
-    const logOut = () => {
-        localStorage.clear();
-        window.location.href = '/';
-    }
-
-
-
-    // const handleClick = event => {
-    //     event.preventDefault();
-    //     console.log(event);
-    // }
-
     return (
-        <header  >
 
+        <header className='test' >
             <Row>
                 <Col>
                     <Navbar color="light" className="header" light expand="sm">
                         <NavbarBrand tag={Link} to="/">
                             <img className="logo" src="https://trello-attachments.s3.amazonaws.com/5d89a54e06bb0a3a361741e9/975x347/87efc95a769db28dc466ae69284802fd/Salt_full_logo.png" />
                         </NavbarBrand>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink tag={Link} to="/" activeClassName="active" active={window.location === '/'}>Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/commentList" activeClassName="active" active={window.location === '/commentList'}> List</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/about" activeClassName="active" active={window.location === '/about'}>About</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/account" activeClassName="active" active={window.location === '/account'}>Account</NavLink>
-                            </NavItem>
 
-                            <NavItem>
-                                <NavLink tag={Link} to="/login" activeClassName="active" active={window.location === '/login'}>Sign in</NavLink>
-                            </NavItem>
+                        <NavCondition />
 
-                            <NavItem>
-                                <NavLink tag={Link} to="/signup" activeClassName="active" className="loginNav" active={window.location === '/signup'} >Sign Up</NavLink>
-                            </NavItem>
-
-                            <button onClick={logOut} > Logout </button>
-
-
-                        </Nav>
                     </Navbar>
                 </Col>
             </Row>

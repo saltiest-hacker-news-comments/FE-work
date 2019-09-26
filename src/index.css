@@ -19,23 +19,44 @@ code {
   display: inline
 }
 
-.dark-mode {
-  color:#fff;
-  background-color: #000000;
-  
+.dark-mode{
+  color:#fff   !important;
+  background-color: #071e22;
 }
 
+
+/* DarkMode Landing Page */
+
+/* Font Colors */
+.dark-mode .top-users-head,
+.dark-mode .jumbo-head,
+.dark-mode .subhead{
+  color:  #fe8a71;
+}
+
+/* Background color */
+.dark-mode .about-header,
+.dark-mode .top-comments,
+.dark-mode .top-users,
 .dark-mode .jumbotron{
-  color:#fff;
-  background-color: #000000;
-  
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%)  !important;
 }
 
-.dark-mode .header {
-  color:#fff;
-  background-color: #998070;
+/* User card background color*/
+.dark-mode .divOutsideMap{
+  background-color: #314158;
+
 }
 
+/* DarkMode Footer */
+.dark-mode footer{
+  background-color: #314158;
+  color:  #fe8a71;
+  font-size: 1.2rem;
+}
+
+/* DarkMode Button Placement */
 .darkRow {
   justify-content: flex-end;
 }
@@ -203,6 +224,10 @@ White: #FFFFFF;
 
 .logo {
   max-height: 75px;
+}
+
+.loginNav {
+  border: 1px solid black;
 }
 
 /* -------------------------------------------------------------------------------- */

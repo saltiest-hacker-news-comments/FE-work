@@ -6,8 +6,6 @@ export const useDarkMode = (initialValue) => {
 
     useEffect(() => {
         const body = document.body;
-        // const Jambotron = document.querySelector('Jumbotron');
-
         dark ? body.classList.add('dark-mode') : body.classList.remove('dark-mode')
 
     }, [dark]);
