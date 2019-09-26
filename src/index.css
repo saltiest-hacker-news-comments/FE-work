@@ -21,7 +21,13 @@ code {
 
 .dark-mode {
   color:#fff;
-  background-color:#000000;
+  background-color: #000000;
+  
+}
+
+.dark-mode .jumbotron{
+  color:#fff;
+  background-color: #000000;
   
 }
 

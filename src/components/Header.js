@@ -10,8 +10,13 @@ import { DarkModeSlider } from './DarkModeSlider/DarkModeSlider.js';
 
 
 const Header = () => {
-
-
+    // const loggedIn(props) {
+    //     const isLoggedIn = props.isLoggedIn;
+    //     if (isLoggedIn) {
+    //         // loggedIn
+    //     }
+    //     // return loggedOut
+    // }
 
     const [darkMode, setDarkMode] = useDarkMode(false);
 
@@ -57,7 +62,11 @@ const Header = () => {
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/signup" activeClassName="active" active={window.location === '/signup'}>Sign Up</NavLink>
+                                <NavLink tag={Link} to="/login" activeClassName="active" active={window.location === '/login'}>Sign in</NavLink>
+                            </NavItem>
+
+                            <NavItem>
+                                <NavLink tag={Link} to="/signup" activeClassName="active" className="loginNav" active={window.location === '/signup'} >Sign Up</NavLink>
                             </NavItem>
 
                             <button onClick={logOut} > Logout </button>

@@ -1,6 +1,7 @@
-import React from "react"
+import React, {useEffect} from "react"
 import TopUserCard from "./TopUserCard"
 import { Card, GridColumn } from "semantic-ui-react";
+import axiosWithAuth from "../../utils/axiosWithAuth";
 
 export const UsersInfo = [
     {
@@ -36,6 +37,13 @@ export const UsersInfo = [
 
 
 export const TopUsers = () => {
+
+    useEffect(() => {
+        axiosWithAuth()
+        .get('/comments/salt')
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    });
     
     // useState here
     // axios here
@@ -47,11 +55,11 @@ export const TopUsers = () => {
                     {UsersInfo.map( user => {
                         return (
                             <TopUserCard
-                            key={user.id}
-                            portrait = {user.portrait}
-                            name={user.name}
-                            bio={user.bio}
-                            comment={user.comment} />
+                                key={user.id}
+                                portrait = {user.portrait}
+                                name={user.name}
+                                bio={user.bio}
+                                comment={user.comment} />
                         )
                     })}
                 </Card.Group>
