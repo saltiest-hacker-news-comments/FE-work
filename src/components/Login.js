@@ -7,7 +7,15 @@ import * as Yup from "yup";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import axios from 'axios';
 //React-strap
-import { Button, NavLink } from "reactstrap";
+import {
+    FormGroup,
+    Label,
+    Input,
+    NavLink,
+    Button
+
+} from "reactstrap";
+
 import { UserContext } from '../context/UserContext';
 
 
@@ -33,14 +41,21 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
 
             <Form className="signUpForm form" onSubmit={handleSubmit}>
 
+                {/* <FormGroup className="signUpInput">
+                    <Label> 🧂 Username: </Label>
+                    <Input type="text" name="username" placeholder="Username" onChange={handleChange} value={users.username} />
+                </FormGroup> */}
+
+
                 <div className="loginUserPass">🧂 Username: </div>
                 <Field className="loginComp" type="text" name="username" placeholder="Your Username" />
                 {touched.username && errors.username && (
                     <p className="error">{errors.username} </p>
 
                 )}
-                <div className="loginUserPass"> 🔑 Password: </div>
+                <div className="loginUserPass">  🔑 Password: </div>
                 <Field className="loginComp" type="text" name="password" placeholder="Your Password" />
+
                 {touched.password && errors.password && (
                     <p className="error">{errors.password} </p>
 

@@ -28,6 +28,8 @@ code {
 /* DarkMode Landing Page */
 
 /* Font Colors */
+.dark-mode .about-content h1,
+.dark-mode .about-content h2,
 .dark-mode .top-users-head,
 .dark-mode .jumbo-head,
 .dark-mode .subhead{
@@ -35,8 +37,10 @@ code {
 }
 
 /* Background color */
+.dark-mode .aboutStyles,
 .dark-mode .about-header,
 .dark-mode .top-comments,
+.dark-mode .signUpForm,
 .dark-mode .top-users,
 .dark-mode .jumbotron{
   background-color: #485461;
