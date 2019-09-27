@@ -147,107 +147,112 @@ const AboutCards = () => (
    // Header Styles
    <>
       <header class="about-header">
+         <div class="about-image">
+            <img src="https://trello-attachments.s3.amazonaws.com/5d8d9c7f12b44b15ac8e4089/440x495/227b4343fcc4b6d3cfc1caa7e6f288b1/anon_saltshaker.png" />
+         </div>
          <div class="about-content" >
             <h1 class="ui huge header">About</h1>
             <p class="text-content">If you were ever interested in searching for salty comments while reading
             Hacker News. Now you have a perfect opportunity not only to search but save and delete your
          favorite comments using the Saltines App.</p>
-            <hr class="hr"></hr>
-            <h2 class="ui large header">Meet The Team</h2>
-            <p class="text-content">
-               Meet our awesome team of Salty Hackers. We are data engineer, machine
-              learners, frontend and backend enthusiasts, Web UI lovers, Team Leads
-              aka Lambda Students.
-         </p>
-            <hr class="hr hr-bottom"></hr>
+
+            {/* <hr class="hr hr-bottom"></hr> */}
          </div>
       </header>
-
-      <div className="aboutStyles">
-         <Card
-            className="aboutCard"
-            image="https://avatars2.githubusercontent.com/u/8314540?s=400&v=4"
-            header="Manjula Mishra"
-            meta="Team Lead"
-            description=""
-            extra={manjula}
-         />
-
-
-         <Card
-            className="aboutCard"
-            image="https://ca.slack-edge.com/T4JUEB3ME-UL8CVG7QE-3e8911514771-72"
-            header="Aaron Scott"
-            meta="Data Engineer"
-            description=""
-            extra={aaron}
-         />
+      {/* <hr class="hr"></hr> */}
+      <div className="cardWrap">
+         <h2 class="ui large header">Meet The Team</h2>
+         <p class="text-content">
+            Meet our awesome team of Salty Hackers. We are data engineer, machine
+           learners, frontend and backend enthusiasts, Web UI lovers, Team Leads
+           aka Lambda Students.
+         </p>
+         <div className="aboutStyles">
+            <Card
+               className="aboutCard"
+               image="https://avatars2.githubusercontent.com/u/8314540?s=400&v=4"
+               header="Manjula Mishra"
+               meta="Team Lead"
+               description=""
+               extra={manjula}
+            />
 
 
-         <Card
-            className="aboutCard"
-            image="https://avatars3.githubusercontent.com/u/6277592?s=400&v=4"
-            header="Nick Burkhalter"
-            meta="Data Engineer"
-            description=""
-            extra={nick}
-         />
-         <Card
-            className="aboutCard"
-            image="https://ca.slack-edge.com/T4JUEB3ME-UJZLU7RPX-0133bf5528e4-72"
-            header="Alfredo Quintana"
-            meta="Machine Learning Engineer"
-            description=""
-            extra={alfredo}
-         />
-         <Card
-            className="aboutCard"
-            image="https://avatars1.githubusercontent.com/u/49086915?s=400&v=4"
-            header="Derek Etman"
-            meta="Web React II"
-            description=""
-            extra={derek}
-         />
-         <Card
-            className="aboutCard"
-            image="https://ca.slack-edge.com/T4JUEB3ME-ULP6AEAF3-7aa2e18de5a8-72"
-            header="Dakotah Huey"
-            meta="Web React I"
-            description=""
-            extra={dakotah}
-         />
-         <Card
-            className="aboutCard"
-            image="https://avatars1.githubusercontent.com/u/52930131?s=400&u=b7619fa18bdb25b9beb319c6169e0fc85227e6fa&v=4"
-            header="Brandy Becker"
-            meta="Web React I"
-            description=""
-            extra={brandy}
-         />
-         <Card
-            className="aboutCard"
-            image="https://avatars0.githubusercontent.com/u/4251464?s=400&v=4"
-            header="Akak Almazbekova"
-            meta="Web React I"
-            description=""
-            extra={akak}
-         />
-         <Card
-            className="aboutCard"
-            image="https://avatars2.githubusercontent.com/u/46656679?s=400&v=4"
-            header="Kathryn Rhoads"
-            meta="Web Backend"
-            description=""
-            extra={kathryn}
-         />
-         <Card
-            className="aboutCard"
-            image="https://avatars0.githubusercontent.com/u/47621726?s=400&v=4"
-            header="Shawn McManus"
-            meta="Web Backend"
-            description=""
-            extra={shawn}
-         />
+            <Card
+               className="aboutCard"
+               image="https://ca.slack-edge.com/T4JUEB3ME-UL8CVG7QE-3e8911514771-72"
+               header="Aaron Scott"
+               meta="Data Engineer"
+               description=""
+               extra={aaron}
+            />
+
+
+            <Card
+               className="aboutCard"
+               image="https://avatars3.githubusercontent.com/u/6277592?s=400&v=4"
+               header="Nick Burkhalter"
+               meta="Data Engineer"
+               description=""
+               extra={nick}
+            />
+            <Card
+               className="aboutCard"
+               image="https://ca.slack-edge.com/T4JUEB3ME-UJZLU7RPX-0133bf5528e4-72"
+               header="Alfredo Quintana"
+               meta="Machine Learning Engineer"
+               description=""
+               extra={alfredo}
+            />
+            <Card
+               className="aboutCard"
+               image="https://avatars1.githubusercontent.com/u/49086915?s=400&v=4"
+               header="Derek Etman"
+               meta="Web React II"
+               description=""
+               extra={derek}
+            />
+            <Card
+               className="aboutCard"
+               image="https://ca.slack-edge.com/T4JUEB3ME-ULP6AEAF3-7aa2e18de5a8-72"
+               header="Dakotah Huey"
+               meta="Web React I"
+               description=""
+               extra={dakotah}
+            />
+            <Card
+               className="aboutCard"
+               image="https://avatars1.githubusercontent.com/u/52930131?s=400&u=b7619fa18bdb25b9beb319c6169e0fc85227e6fa&v=4"
+               header="Brandy Becker"
+               meta="Web React I"
+               description=""
+               extra={brandy}
+            />
+            <Card
+               className="aboutCard"
+               image="https://avatars0.githubusercontent.com/u/4251464?s=400&v=4"
+               header="Akak Almazbekova"
+               meta="Web React I"
+               description=""
+               extra={akak}
+            />
+            <Card
+               className="aboutCard"
+               image="https://avatars2.githubusercontent.com/u/46656679?s=400&v=4"
+               header="Kathryn Rhoads"
+               meta="Web Backend"
+               description=""
+               extra={kathryn}
+            />
+            <Card
+               className="aboutCard"
+               image="https://avatars0.githubusercontent.com/u/47621726?s=400&v=4"
+               header="Shawn McManus"
+               meta="Web Backend"
+               description=""
+               extra={shawn}
+            />
+         </div>
       </div>
    </>
 );

@@ -436,13 +436,23 @@ White: #FFFFFF;
 /* About.js Header styles -------------------------------------------------------------- */
 
 .about-header{
+  display: flex;
+  /* flex-direction: column; */
   background-color:  #F97E03;
+  padding: 2% 10%;
+  margin: 0 auto;
 }
 
 .about-content{
   width: 55%;
-  margin: 0 auto;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
+.cardWrap{
+  padding:2rem 0 0 0;
+}
+
 .hr{
  border: 1px solid white;
  width: 100%;
