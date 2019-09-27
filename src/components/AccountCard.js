@@ -13,11 +13,14 @@ const Account = (props) => {
   
   const deleteFavorite = e => {
     e.preventDefault();
-    console.log({'"comment"':`${id}`})
+    // console.log({'"comment"':`${id}`})
     axiosWithAuth()
     // axios
-    .delete('https://salty-hackers.herokuapp.com/api/comments/deletefav', {"comment": `${id}`})
-    .then(res => console.log("Saved Res: ", res))
+    .delete(`https://salty-hackers.herokuapp.com/api/comments/${id}/deletefav`)
+    .then(res => {
+      console.log("Saved Res: ", res)
+      window.location.reload(false)
+  })
     .catch(err => console.log(err))
   }
   const userPortraitSubstitute = 'https://trello-attachments.s3.amazonaws.com/5d8c0d9e9b5de27371d1fc17/111x235/6d67ae9f110b59ad39ea8c38852d3a62/salt_shaker.png'

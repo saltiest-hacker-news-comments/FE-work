@@ -49,9 +49,9 @@ function App() {
 
           <Route exact path="/about" component={About} />
           <Route exact path="/commentList" component={CommentList} />
-          <Route exact path="/account" component={AccountList} />
+          {/* <Route exact path="/account" component={AccountList} /> */}
+          <PrivateRoute exact path="/account" component={AccountList} />
           <Route path="/navCondition" component={NavCondition} />
-          {/* <PrivateRoute exact path="/account" component={AccountList} /> */}
 
 
         </Switch>

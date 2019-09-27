@@ -8,59 +8,42 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 import axios from "axios";
 
 
-export const CommentList = (props) => {
-    const [saltyData, setSaltyData] = useState(UsersInfo);
+export const CommentList = () => {
     const [commentList, setCommentList] = useState([]);
-    const [searchTerm, setSearchTerm] = useState();
+    const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([])
 
     // console.log("COMMENT LIST: ", commentList);
 
     const handleChange = event => {
-        // console.log("SEARCH: ", event.target.value)
         setSearchTerm(event.target.value)
-        // console.log("SEARCH TERM: ", searchTerm)
     }
 
+    // List automatically renders and places data into commentList
     useEffect(() => {
         axiosWithAuth()
             .get('/comments/topsalt')
-            .then(res => {
-                console.log("topSalt: ", res);
-                setCommentList(res.data)
-            })
+            .then(res => setCommentList(res.data))
             .catch(err => console.log(err))
     }, [])
+    console.log("commentList?: ", commentList)
 
-    // useEffect(() => {
-    //     // console.log("CommentList: ", commentList);
 
-    //     const results = commentList.map(comment => {
-    //         console.log("COMMENT: ", comment)
-    //         console.log("Searchterm: ", searchTerm)
 
-    //         const test = comment.author.toLowerCase();
-    //         console.log("TEST: ", test)
-    //         if (test === /searchTerm/i) {
-    //             console.log(true)
-    //             return comment;
-    //         } else {
-    //             console.log(false)
-    //         }
-    //     })
-    //     // setSearchResults(results);
-    //     console.log("RESULTS ", results)
+    // Notes for self
+    // Comment List is rendered on load
+    // Search bar compares searchterm to comment List and returns searchResults
+    // The Card making map needs to take in the if/else of the comment list & 
 
-    // }, [searchTerm])
-
+    // filter search results for mapping below
     useEffect(() => {
-
-        const results = commentList.filter(comment =>
-            comment.author.toLowerCase().includes(searchTerm)
-        )
-        // console.log("RESULTS: ", results) // empty array
+        const results = commentList.filter(comment => comment.author.toLowerCase().includes(searchTerm));
         setSearchResults(results)
     }, [searchTerm])
+
+    const showMe = () => {
+        return searchTerm === "" ? commentList : searchResults;
+    }
 
 
     return (
@@ -72,22 +55,21 @@ export const CommentList = (props) => {
                         id="name"
                         type="text"
                         name="textfield"
-                        placeholder="Search..."
+                        placeholder="Search By Author..."
                         value={searchTerm}
                         onChange={handleChange}
                     />
                 </label>
             </form>
             <div className="divOutsideMap">
-                {searchResults.map(data => {
-                    return (
-                        <div className="divInsideMap"> <CommentCard key={data.id} author={data.author} comment={data.text} score={data.score} data={data} /></div>
-                    );
-                })}
+                {
+                    showMe().map(data => {
+                        return (
+                            <div className="divInsideMap"> <CommentCard key={data.id} author={data.author} comment={data.text} score={data.score} data={data} /></div>
+                        );
+                    })
+                }
             </div>
         </section>
     )
-
-};
-
-
+}    

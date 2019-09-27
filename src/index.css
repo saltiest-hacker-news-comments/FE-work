@@ -33,7 +33,7 @@ code {
 .dark-mode .top-users-head,
 .dark-mode .jumbo-head,
 .dark-mode .subhead{
-  color:  #fe8a71;
+  color:  c;
 }
 
 /* Background color */
@@ -45,6 +45,12 @@ code {
 .dark-mode .jumbotron{
   background-color: #485461;
   background-image: linear-gradient(315deg, #485461 0%, #28313b 74%)  !important;
+}
+
+
+/* Sign-up/Login font color */
+.dark-mode .signUpInput {
+  color: #000000;
 }
 
 /* User card background color*/
@@ -71,6 +77,24 @@ code {
   margin-right: 5%; 
   /* align-items: flex-start; */
 }
+
+
+#salt{
+  margin-right: 7px;
+}
+
+/* .fitted .slider . */
+
+.fitted {
+  border: 2px solid #fe8a71;
+  height: 29px;
+  width: 60px;
+  padding:  3px;
+  margin-right: 10px;
+  border-radius: 50px;
+  background-color: grey;
+
+} 
 
 /* Sign Up CSS Below --------------------------------------------------------------*/
 
@@ -190,18 +214,16 @@ White: #FFFFFF;
   height: 5rem;
   margin-top: 0;
 }
-
-.loginUserPass {
-  border: 3px solid white;
-  width: 10rem;
+/* 
+.loginUserPass{
+  width: 30rem;
   background: white;
   padding: 0.8rem;
   border-radius: 3em;
-  margin: 1rem;
-  margin-top: 0;
-  color: black;
-  
-}
+  margin: 1.3rem;
+  height: 6.5rem; 
+} */
+
 
 .headerStyles{
   width: 40rem;
@@ -232,6 +254,10 @@ White: #FFFFFF;
 
 .loginNav {
   border: 1px solid black;
+}
+
+.lg-out {
+  color:white;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -275,6 +301,7 @@ White: #FFFFFF;
     width: 15rem !important;
     margin: 1rem !important;
   }
+
   .aboutCard:hover {
     transform: scale(1.08);
     box-shadow: 0 0 1rem #4A3E36 !important;
@@ -290,9 +317,7 @@ White: #FFFFFF;
   }
 
   .stylesGH{
-    width: 8.7rem !important;
-    
-  }
+ }
 
   .stylesLI{
     width: 4.7rem !important;
@@ -441,7 +466,8 @@ footer{
   background-color: #4A3E36;
   padding: 2%;
   color: #ffffff;
-}/*--------------------------------------------------------------------------------- */
+}
+/*--------------------------------------------------------------------------------- */
 /* AccountCard styles -------------------------------------------------------------- */
 
 .comment-delete{
