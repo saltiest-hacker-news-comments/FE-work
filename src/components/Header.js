@@ -42,10 +42,10 @@ const Header = () => {
                 <Col>
                     <Row className="darkRow">
                         <div className="darkWrap">
-                            <p> Salt </p>
+                            <p id="salt"> Salt </p>
 
-                            <div className="ui fitted slider checkbox">
-                                <input type="radio" readOnly="" tabIndex="0" onClick={toggleDark} class="hidden" className={darkMode ? 'toggle toggled' : 'toggle'} />
+                            <div className="ui fitted toggle checkbox">
+                                <input id="radio" type="radio" readOnly="" tabIndex="0" onClick={toggleDark} class="hidden" className={darkMode ? 'toggle toggled' : 'toggle'} />
                                 <label />
                             </div>
 

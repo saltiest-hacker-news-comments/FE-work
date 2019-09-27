@@ -18,15 +18,17 @@ const LoggedIn = () => {
                     <NavLink tag={Link} to="/" activeClassName="active" active={window.location === '/'}>Home</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={Link} to="/commentList" activeClassName="active" active={window.location === '/commentList'}> List</NavLink>
+                    <NavLink tag={Link} to="/commentList" active={window.location === '/commentList'}> List</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={Link} to="/about" activeClassName="active" active={window.location === '/about'}>About</NavLink>
+                    <NavLink tag={Link} to="/about" active={window.location === '/about'}>About</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={Link} to="/account" activeClassName="active" active={window.location === '/account'}>Account</NavLink>
+                    <NavLink tag={Link} to="/account" active={window.location === '/account'}>Account</NavLink>
                 </NavItem>
-                <button onClick={logOut} > Logout </button>
+                <NavItem>
+                    <NavLink onClick={logOut} className="lg-out"> Logout </NavLink>
+                </NavItem>
             </Nav>
         </>
     )

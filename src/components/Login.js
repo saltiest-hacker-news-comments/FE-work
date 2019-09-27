@@ -41,27 +41,33 @@ const Login = ({ values, errors, status, touched, handleSubmit }) => {
 
             <Form className="signUpForm form" onSubmit={handleSubmit}>
 
-                {/* <FormGroup className="signUpInput">
-                    <Label> 🧂 Username: </Label>
-                    <Input type="text" name="username" placeholder="Username" onChange={handleChange} value={users.username} />
-                </FormGroup> */}
 
+                {/* <FormGroup className="loginUserPass">
+                    <Label> 🧂 Username: </Label>
+                    <Input className="loginComp" type="text" name="username" placeholder="Username" />
+                </FormGroup> */}
 
                 <div className="loginUserPass">🧂 Username: </div>
                 <Field className="loginComp" type="text" name="username" placeholder="Your Username" />
+
                 {touched.username && errors.username && (
                     <p className="error">{errors.username} </p>
 
                 )}
-                <div className="loginUserPass">  🔑 Password: </div>
-                <Field className="loginComp" type="text" name="password" placeholder="Your Password" />
 
+                {/* <FormGroup className="loginUserPass">
+                    <Label> 🔑 Password: </Label>
+                    <Input className="loginComp" type="password" name="password" placeholder="Password" />
+                </FormGroup> */}
+
+                <div className="loginUserPass"> 🔑 Password: </div>
+                <Field className="loginComp" type="text" name="password" placeholder="Your Password" />
                 {touched.password && errors.password && (
                     <p className="error">{errors.password} </p>
 
                 )}
 
-                <Button className="signUpSubmitBtn submitBtn" type="submit">Login</Button>
+                <button className="signUpSubmitBtn submitBtn" type="submit">Login ✔️</button>
 
                 {/* Link to SignUp If user has an Account */}
                 <NavLink className="signUpLink" href="/signup"> Don't Have an Account? Sign Up Here !</NavLink>

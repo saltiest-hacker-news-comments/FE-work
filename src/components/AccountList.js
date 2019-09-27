@@ -32,8 +32,8 @@ const AccountList =  ( props ) => {
         <div className="divOutsideMap">
             <h3>Your Saved Comments</h3>
             <div className="divInsideMap">
-              <Comment.Group> {/* pulled Comment.Group out from AccountCard.js to here -Dakotah */}
-               {favorite.map(data =>  <AccountCard data={data} /> ) /* returns one big card currently, will try to fix in the AM -Dakotah */}
+              <Comment.Group>
+               {favorite.map(data =>  <AccountCard data={data} /> )}
               </Comment.Group>
             </div>
         </div>
