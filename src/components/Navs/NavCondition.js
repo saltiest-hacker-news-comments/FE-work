@@ -1,7 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 
-import useLocalStorage from '../../hooks/useLocalStorage';
-import { UserContext } from '../../context/UserContext';
 import LoggedIn from './LoggedIn';
 import LoggedOut from './LoggedOut';
 

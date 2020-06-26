@@ -51,8 +51,7 @@ function App() {
           <Route exact path="/commentList" component={CommentList} />
           {/* <Route exact path="/account" component={AccountList} /> */}
           <PrivateRoute exact path="/account" component={AccountList} />
-          <Route path="/navCondition" component={NavCondition} />
-
+          {/* <Route path="/navCondition" component={NavCondition} /> */}
 
         </Switch>
         <Footer />

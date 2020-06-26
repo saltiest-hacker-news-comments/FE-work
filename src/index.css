@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+.splash{
+  width:30%;
+}
 
 /* ---------------- DARK MODE -----------------------------------------------------*/
 .dark-mode__toggle{
@@ -316,9 +319,6 @@ White: #FFFFFF;
     
   }
 
-  .stylesGH{
- }
-
   .stylesLI{
     width: 4.7rem !important;
     
@@ -338,6 +338,7 @@ White: #FFFFFF;
   padding: 2%;
   width: 80%;
   margin: 0 auto;
+  margin-top: 10%;
 }
 
 .top-users-head {
