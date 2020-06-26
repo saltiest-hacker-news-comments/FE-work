@@ -1,23 +1,20 @@
 //React
-import React, { useState, useEffect } from "react";
-
+//Formik
+import { Form } from "formik";
+import React, { useState } from "react";
 //ReactStrap
 import {
     FormGroup,
-    Label,
-    Input,
+
+    Input, Label,
+
     NavLink
 } from "reactstrap";
-
-//Formik
-
-import { Form } from "formik";
-
-//Axios
-import axios from "axios";
 import axiosWithAuth from "../utils/axiosWithAuth";
 
-import ProgressLoader from './Loader';
+
+
+
 
 
 /* Component ------------------------------------------------------------------------------------------------------ */

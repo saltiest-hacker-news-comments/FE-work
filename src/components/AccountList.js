@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
-import AccountCard from './AccountCard';
-import axiosWithAuth from '../utils/axiosWithAuth';
+import React, { useContext, useEffect, useState } from 'react';
+import { Comment } from 'semantic-ui-react';
 // import { UsersInfo } from './LandingPage/TopUsers'; 
 import { UserContext } from '../context/UserContext';
-import { Comment } from 'semantic-ui-react';
+import axiosWithAuth from '../utils/axiosWithAuth';
+import AccountCard from './AccountCard';
 
 
 

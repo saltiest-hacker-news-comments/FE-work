@@ -1,11 +1,9 @@
 // React Stuff
-import React, { useState, useEffect } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import axiosWithAuth from '../utils/axiosWithAuth';
 // Component Imports
 import CommentCard from './CommentCard';
-import { UsersInfo } from './LandingPage/TopUsers';
-import axiosWithAuth from '../utils/axiosWithAuth';
-import axios from "axios";
+
 
 
 export const CommentList = () => {

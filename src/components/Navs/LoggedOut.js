@@ -1,8 +1,8 @@
 // React Stuff
-import React, { useContext } from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 // Layout Stuf
-import { Container, Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import { Nav, NavItem, NavLink } from "reactstrap";
 
 
 const LoggedOut = () => {

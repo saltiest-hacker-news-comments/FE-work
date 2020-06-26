@@ -1,6 +1,5 @@
 import React from "react";
-import Loader from 'react-loader-spinner'
-import axios from "axios";
+import Loader from 'react-loader-spinner';
 const ProgressLoader = () => {
     //other logic
 

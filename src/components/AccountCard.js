@@ -1,8 +1,7 @@
 import React from 'react';
 import { Comment } from 'semantic-ui-react';
-
 import axiosWithAuth from '../utils/axiosWithAuthTwo';
-import axios from 'axios'
+
 
 
 const Account = (props) => {

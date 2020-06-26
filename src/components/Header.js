@@ -1,19 +1,14 @@
 // React Stuff
-import React, { useContext } from 'react';
-import {  Link } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 // Layout Stuf
-import { Row, Col, Navbar, NavbarBrand } from "reactstrap";
-import {Radio} from "semantic-ui-react";
-
+import { Col, Navbar, NavbarBrand, Row } from "reactstrap";
+import { Radio } from "semantic-ui-react";
 // component Stuff
 import { useDarkMode } from '../hooks/useDarkMode';
-// Nav Change 
-// import NavCondition from './Navs/NavCondition';
-import LoggedIn from './Navs/LoggedOut';
-import LoggedOut from './Navs/LoggedIn';
 import NavCondition from './Navs/NavCondition';
 
-import { DarkModeSlider } from './DarkModeSlider/DarkModeSlider';
+
 
 
 export const RadioExampleToggle = () => <Radio toggle />
